@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: d1258b5818340af4a81305a1049a6c0c
+timeCreated: 1499190788
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: battlement_straight_35
+    100002: battlement_straight_36
+    100004: battlement_straight_37
+    100006: battlement_straight_38
+    100008: battlement_straight_39
+    100010: battlement_straight_40
+    100012: planks_floor_45
+    100014: planks_floor_46
+    100016: planks_floor_47
+    100018: planks_floor_48
+    100020: planks_floor_49
+    100022: planks_floor_50
+    100024: //RootNode
+    400000: battlement_straight_35
+    400002: battlement_straight_36
+    400004: battlement_straight_37
+    400006: battlement_straight_38
+    400008: battlement_straight_39
+    400010: battlement_straight_40
+    400012: planks_floor_45
+    400014: planks_floor_46
+    400016: planks_floor_47
+    400018: planks_floor_48
+    400020: planks_floor_49
+    400022: planks_floor_50
+    400024: //RootNode
+    2300000: battlement_straight_35
+    2300002: battlement_straight_36
+    2300004: battlement_straight_37
+    2300006: battlement_straight_38
+    2300008: battlement_straight_39
+    2300010: battlement_straight_40
+    2300012: planks_floor_45
+    2300014: planks_floor_46
+    2300016: planks_floor_47
+    2300018: planks_floor_48
+    2300020: planks_floor_49
+    2300022: planks_floor_50
+    3300000: battlement_straight_35
+    3300002: battlement_straight_36
+    3300004: battlement_straight_37
+    3300006: battlement_straight_38
+    3300008: battlement_straight_39
+    3300010: battlement_straight_40
+    3300012: planks_floor_45
+    3300014: planks_floor_46
+    3300016: planks_floor_47
+    3300018: planks_floor_48
+    3300020: planks_floor_49
+    3300022: planks_floor_50
+    4300000: battlement_straight_35
+    4300002: battlement_straight_36
+    4300004: battlement_straight_37
+    4300006: battlement_straight_38
+    4300008: battlement_straight_39
+    4300010: battlement_straight_40
+    4300012: planks_floor_45
+    4300014: planks_floor_46
+    4300016: planks_floor_47
+    4300018: planks_floor_48
+    4300020: planks_floor_49
+    4300022: planks_floor_50
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

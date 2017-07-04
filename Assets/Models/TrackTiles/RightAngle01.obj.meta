@@ -1,0 +1,229 @@
+fileFormatVersion: 2
+guid: 04e861c03199b7f45afa0f5f3ba45b0d
+timeCreated: 1499192746
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: battlement_cornerDiagonal_12
+    100002: battlement_cornerDiagonal_16
+    100004: battlement_straight_14
+    100006: battlement_straight_15
+    100008: battlement_straight_17
+    100010: battlement_straight_18
+    100012: floor_corner_19
+    100014: floor_corner_30
+    100016: floor_square_20
+    100018: floor_square_21
+    100020: floor_square_23
+    100022: floor_square_25
+    100024: floor_square_26
+    100026: floor_square_27
+    100028: floor_square_28
+    100030: //RootNode
+    100032: battlement_cornerDiagonal_51
+    100034: battlement_cornerDiagonal_54
+    100036: battlement_straight_65
+    100038: battlement_straight_67
+    100040: battlement_straight_68
+    100042: battlement_straight_69
+    100044: floor_corner_55
+    100046: floor_corner_56
+    100048: floor_square_57
+    100050: floor_square_58
+    100052: floor_square_59
+    100054: floor_square_60
+    100056: floor_square_61
+    100058: floor_square_62
+    100060: floor_square_63
+    400000: battlement_cornerDiagonal_12
+    400002: battlement_cornerDiagonal_16
+    400004: battlement_straight_14
+    400006: battlement_straight_15
+    400008: battlement_straight_17
+    400010: battlement_straight_18
+    400012: floor_corner_19
+    400014: floor_corner_30
+    400016: floor_square_20
+    400018: floor_square_21
+    400020: floor_square_23
+    400022: floor_square_25
+    400024: floor_square_26
+    400026: floor_square_27
+    400028: floor_square_28
+    400030: //RootNode
+    400032: battlement_cornerDiagonal_51
+    400034: battlement_cornerDiagonal_54
+    400036: battlement_straight_65
+    400038: battlement_straight_67
+    400040: battlement_straight_68
+    400042: battlement_straight_69
+    400044: floor_corner_55
+    400046: floor_corner_56
+    400048: floor_square_57
+    400050: floor_square_58
+    400052: floor_square_59
+    400054: floor_square_60
+    400056: floor_square_61
+    400058: floor_square_62
+    400060: floor_square_63
+    2300000: battlement_cornerDiagonal_12
+    2300002: battlement_cornerDiagonal_16
+    2300004: battlement_straight_14
+    2300006: battlement_straight_15
+    2300008: battlement_straight_17
+    2300010: battlement_straight_18
+    2300012: floor_corner_19
+    2300014: floor_corner_30
+    2300016: floor_square_20
+    2300018: floor_square_21
+    2300020: floor_square_23
+    2300022: floor_square_25
+    2300024: floor_square_26
+    2300026: floor_square_27
+    2300028: floor_square_28
+    2300030: battlement_cornerDiagonal_51
+    2300032: battlement_cornerDiagonal_54
+    2300034: battlement_straight_65
+    2300036: battlement_straight_67
+    2300038: battlement_straight_68
+    2300040: battlement_straight_69
+    2300042: floor_corner_55
+    2300044: floor_corner_56
+    2300046: floor_square_57
+    2300048: floor_square_58
+    2300050: floor_square_59
+    2300052: floor_square_60
+    2300054: floor_square_61
+    2300056: floor_square_62
+    2300058: floor_square_63
+    3300000: battlement_cornerDiagonal_12
+    3300002: battlement_cornerDiagonal_16
+    3300004: battlement_straight_14
+    3300006: battlement_straight_15
+    3300008: battlement_straight_17
+    3300010: battlement_straight_18
+    3300012: floor_corner_19
+    3300014: floor_corner_30
+    3300016: floor_square_20
+    3300018: floor_square_21
+    3300020: floor_square_23
+    3300022: floor_square_25
+    3300024: floor_square_26
+    3300026: floor_square_27
+    3300028: floor_square_28
+    3300030: battlement_cornerDiagonal_51
+    3300032: battlement_cornerDiagonal_54
+    3300034: battlement_straight_65
+    3300036: battlement_straight_67
+    3300038: battlement_straight_68
+    3300040: battlement_straight_69
+    3300042: floor_corner_55
+    3300044: floor_corner_56
+    3300046: floor_square_57
+    3300048: floor_square_58
+    3300050: floor_square_59
+    3300052: floor_square_60
+    3300054: floor_square_61
+    3300056: floor_square_62
+    3300058: floor_square_63
+    4300000: battlement_cornerDiagonal_12
+    4300002: battlement_cornerDiagonal_16
+    4300004: battlement_straight_14
+    4300006: battlement_straight_15
+    4300008: battlement_straight_17
+    4300010: battlement_straight_18
+    4300012: floor_corner_19
+    4300014: floor_corner_30
+    4300016: floor_square_20
+    4300018: floor_square_21
+    4300020: floor_square_23
+    4300022: floor_square_25
+    4300024: floor_square_26
+    4300026: floor_square_27
+    4300028: floor_square_28
+    4300030: battlement_cornerDiagonal_51
+    4300032: battlement_cornerDiagonal_54
+    4300034: battlement_straight_65
+    4300036: battlement_straight_67
+    4300038: battlement_straight_68
+    4300040: battlement_straight_69
+    4300042: floor_corner_55
+    4300044: floor_corner_56
+    4300046: floor_square_57
+    4300048: floor_square_58
+    4300050: floor_square_59
+    4300052: floor_square_60
+    4300054: floor_square_61
+    4300056: floor_square_62
+    4300058: floor_square_63
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
