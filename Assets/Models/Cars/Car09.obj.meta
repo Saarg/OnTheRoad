@@ -1,0 +1,179 @@
+fileFormatVersion: 2
+guid: bcd195aace5e24c4fb4d8fd37a652c26
+timeCreated: 1499461272
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 01_Tank_Barrel_01_14
+    100002: 01_Tank_Body_01_7
+    100004: 01_Tank_Body_Front_02_4
+    100006: 01_Tank_Body_Front_03_5
+    100008: 01_Tank_Body_Track_cover_02_16
+    100010: 01_Tank_Body_Track_cover_02_17
+    100012: 01_Tank_Body_Tracks_02_2
+    100014: 01_Tank_Body_Tracks_02_3
+    100016: 01_Tank_Body_turret_03_13
+    100018: 02_Bus_Back_01_12
+    100020: 02_Car_Body_wheel_02_18
+    100022: 02_Car_Body_wheel_02_20
+    100024: 02_Car_Body_wheel_02_21
+    100026: 02_Car_Body_wheel_02_25
+    100028: 02_Car_Body_wheel_02_26
+    100030: 02_Car_Body_wheel_02_27
+    100032: 02_Car_Body_wheel_03_22
+    100034: 02_Car_Body_wheel_03_23
+    100036: 02_Car_Body_wheel_03_24
+    100038: 02_Car_Body_wheel_03_28
+    100040: //RootNode
+    400000: 01_Tank_Barrel_01_14
+    400002: 01_Tank_Body_01_7
+    400004: 01_Tank_Body_Front_02_4
+    400006: 01_Tank_Body_Front_03_5
+    400008: 01_Tank_Body_Track_cover_02_16
+    400010: 01_Tank_Body_Track_cover_02_17
+    400012: 01_Tank_Body_Tracks_02_2
+    400014: 01_Tank_Body_Tracks_02_3
+    400016: 01_Tank_Body_turret_03_13
+    400018: 02_Bus_Back_01_12
+    400020: 02_Car_Body_wheel_02_18
+    400022: 02_Car_Body_wheel_02_20
+    400024: 02_Car_Body_wheel_02_21
+    400026: 02_Car_Body_wheel_02_25
+    400028: 02_Car_Body_wheel_02_26
+    400030: 02_Car_Body_wheel_02_27
+    400032: 02_Car_Body_wheel_03_22
+    400034: 02_Car_Body_wheel_03_23
+    400036: 02_Car_Body_wheel_03_24
+    400038: 02_Car_Body_wheel_03_28
+    400040: //RootNode
+    2300000: 01_Tank_Barrel_01_14
+    2300002: 01_Tank_Body_01_7
+    2300004: 01_Tank_Body_Front_02_4
+    2300006: 01_Tank_Body_Front_03_5
+    2300008: 01_Tank_Body_Track_cover_02_16
+    2300010: 01_Tank_Body_Track_cover_02_17
+    2300012: 01_Tank_Body_Tracks_02_2
+    2300014: 01_Tank_Body_Tracks_02_3
+    2300016: 01_Tank_Body_turret_03_13
+    2300018: 02_Bus_Back_01_12
+    2300020: 02_Car_Body_wheel_02_18
+    2300022: 02_Car_Body_wheel_02_20
+    2300024: 02_Car_Body_wheel_02_21
+    2300026: 02_Car_Body_wheel_02_25
+    2300028: 02_Car_Body_wheel_02_26
+    2300030: 02_Car_Body_wheel_02_27
+    2300032: 02_Car_Body_wheel_03_22
+    2300034: 02_Car_Body_wheel_03_23
+    2300036: 02_Car_Body_wheel_03_24
+    2300038: 02_Car_Body_wheel_03_28
+    3300000: 01_Tank_Barrel_01_14
+    3300002: 01_Tank_Body_01_7
+    3300004: 01_Tank_Body_Front_02_4
+    3300006: 01_Tank_Body_Front_03_5
+    3300008: 01_Tank_Body_Track_cover_02_16
+    3300010: 01_Tank_Body_Track_cover_02_17
+    3300012: 01_Tank_Body_Tracks_02_2
+    3300014: 01_Tank_Body_Tracks_02_3
+    3300016: 01_Tank_Body_turret_03_13
+    3300018: 02_Bus_Back_01_12
+    3300020: 02_Car_Body_wheel_02_18
+    3300022: 02_Car_Body_wheel_02_20
+    3300024: 02_Car_Body_wheel_02_21
+    3300026: 02_Car_Body_wheel_02_25
+    3300028: 02_Car_Body_wheel_02_26
+    3300030: 02_Car_Body_wheel_02_27
+    3300032: 02_Car_Body_wheel_03_22
+    3300034: 02_Car_Body_wheel_03_23
+    3300036: 02_Car_Body_wheel_03_24
+    3300038: 02_Car_Body_wheel_03_28
+    4300000: 01_Tank_Barrel_01_14
+    4300002: 01_Tank_Body_01_7
+    4300004: 01_Tank_Body_Front_02_4
+    4300006: 01_Tank_Body_Front_03_5
+    4300008: 01_Tank_Body_Track_cover_02_16
+    4300010: 01_Tank_Body_Track_cover_02_17
+    4300012: 01_Tank_Body_Tracks_02_2
+    4300014: 01_Tank_Body_Tracks_02_3
+    4300016: 01_Tank_Body_turret_03_13
+    4300018: 02_Bus_Back_01_12
+    4300020: 02_Car_Body_wheel_02_18
+    4300022: 02_Car_Body_wheel_02_20
+    4300024: 02_Car_Body_wheel_02_21
+    4300026: 02_Car_Body_wheel_02_25
+    4300028: 02_Car_Body_wheel_02_26
+    4300030: 02_Car_Body_wheel_02_27
+    4300032: 02_Car_Body_wheel_03_22
+    4300034: 02_Car_Body_wheel_03_23
+    4300036: 02_Car_Body_wheel_03_24
+    4300038: 02_Car_Body_wheel_03_28
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
