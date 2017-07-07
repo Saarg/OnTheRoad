@@ -11,7 +11,10 @@ public class FreePlayMode : MonoBehaviour {
     private GameObject[] _cars;
     [SerializeField]
     private int _curCar = 0;
-    
+
+    [SerializeField]
+    private RectTransform speedo;
+
     void Start () {
         _camera = Camera.main;
 
@@ -40,5 +43,11 @@ public class FreePlayMode : MonoBehaviour {
         {
             _cars[_curCar].transform.position = new Vector3(0, 4, 0);
         }
+        
+        float angle = Mathf.Lerp(speedo.rotation.ToEuler().z, -(_cars[_curCar].GetComponent<WheelVehicle>().speed) / 220 * 180, 0.53f);
+
+        
+
+        speedo.rotation = Quaternion.AngleAxis(4 * angle, Vector3.forward);
     }
 }
