@@ -32,6 +32,11 @@ public class FreePlayMode : MonoBehaviour {
     }
 
     void Update () {
+        if (Input.GetButtonDown("Submit"))
+        {
+            SelectCar(_curCar);
+        }
+
         if (Input.GetButtonDown("Cancel"))
         {
             Pause();
@@ -46,6 +51,8 @@ public class FreePlayMode : MonoBehaviour {
 
     public void SelectCar(Int32 c)
     {
+        CheckPoint.Reset();
+
         _cars[_curCar].GetComponent<WheelVehicle>().handbreak = true;
         _cars[_curCar].SetActive(false);
 
