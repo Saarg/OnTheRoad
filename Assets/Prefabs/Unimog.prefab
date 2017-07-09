@@ -363,8 +363,8 @@ GameObject:
   - component: {fileID: 54699185106450964}
   - component: {fileID: 114336935496102158}
   m_Layer: 0
-  m_Name: Car05
-  m_TagString: Untagged
+  m_Name: Unimog
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
