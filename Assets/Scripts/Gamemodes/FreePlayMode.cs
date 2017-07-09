@@ -16,6 +16,9 @@ public class FreePlayMode : MonoBehaviour {
     [SerializeField]
     private Canvas inGameUI;
     [SerializeField]
+    private Dropdown carDropDown;
+
+    [SerializeField]
     private Canvas pauseUI;
     [SerializeField]
     private RectTransform speedo;
@@ -37,6 +40,12 @@ public class FreePlayMode : MonoBehaviour {
         {
             Debug.LogWarning("More than one FreePlayMode in the scene!!! deleting one...");
             Destroy(this);
+        }
+
+        carDropDown.options.Clear();
+        foreach (GameObject car in _cars)
+        {
+            carDropDown.options.Add(new Dropdown.OptionData(car.name));
         }
     }
 

@@ -197,7 +197,7 @@ GameObject:
   - component: {fileID: 54920153307103988}
   - component: {fileID: 114460310432674206}
   m_Layer: 0
-  m_Name: Car09
+  m_Name: Tank
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
