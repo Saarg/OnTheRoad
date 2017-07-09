@@ -81,14 +81,12 @@ public class FreePlayMode : MonoBehaviour {
     public void SelectCar(Int32 c)
     {
         CheckPoint.Reset();
-
-        _cars[_curCar].GetComponent<WheelVehicle>().handbreak = true;
+        
         _cars[_curCar].SetActive(false);
 
         _curCar = c;
 
         _camera.GetComponent<SmoothFollow>().Target = _cars[_curCar].transform;
-        _cars[_curCar].GetComponent<WheelVehicle>().handbreak = false;
         _cars[_curCar].transform.position = Vector3.up;
         _cars[_curCar].transform.rotation = Quaternion.identity;
         _cars[_curCar].SetActive(true);
@@ -96,6 +94,8 @@ public class FreePlayMode : MonoBehaviour {
 
     public void Pause()
     {
+        _cars[_curCar].GetComponent<WheelVehicle>().handbreak = true;
+
         Time.timeScale = 0;
         
         pauseUI.gameObject.SetActive(true);
@@ -104,6 +104,8 @@ public class FreePlayMode : MonoBehaviour {
 
     public void Resume()
     {
+        _cars[_curCar].GetComponent<WheelVehicle>().handbreak = false;
+
         Time.timeScale = 1;
 
         pauseUI.gameObject.SetActive(false);

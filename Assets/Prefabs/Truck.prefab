@@ -803,13 +803,15 @@ GameObject:
   - component: {fileID: 4601230301811988}
   - component: {fileID: 54025208546531168}
   - component: {fileID: 114533404006784760}
+  - component: {fileID: 82351229509184304}
+  - component: {fileID: 114273992096475052}
   m_Layer: 0
   m_Name: Truck
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1713232704298622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +1009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1959997797811100
 GameObject:
   m_ObjectHideFlags: 1
@@ -2844,6 +2846,86 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.7389903, y: 0.8611835, z: 1.6000007}
   m_Center: {x: -1.6305062, y: 0.6368372, z: -1.0970293e-12}
+--- !u!82 &82351229509184304
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699637194821248}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!108 &108208868768841152
 Light:
   m_ObjectHideFlags: 1
@@ -3036,6 +3118,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wheelModel: {fileID: 1436177240594094}
+--- !u!114 &114273992096475052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1699637194821248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cf26a406bad0b4280494683f9c6af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starting: {fileID: 8300000, guid: d18ace5281193f240b65e9b3bd9de7e7, type: 3}
+  rolling: {fileID: 8300000, guid: 15f3ec1c2a0ceb045b446bf52c023604, type: 3}
+  stopping: {fileID: 8300000, guid: 2f20f376f41546842b08243fc7576767, type: 3}
+  flatoutSpeed: 30
+  minPitch: 0.7
+  pitchSpeed: 0.05
 --- !u!114 &114298266925636134
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3154,14 +3253,6 @@ MonoBehaviour:
   - {fileID: 146627625258455186}
   - {fileID: 146643022811292760}
   - {fileID: 146477626096523370}
-  - {fileID: 146959679461763366}
-  - {fileID: 146621410067867242}
-  - {fileID: 146927207139406480}
-  - {fileID: 146815153072751058}
-  - {fileID: 146561354932270440}
-  - {fileID: 146349904901386654}
-  - {fileID: 146610872088930422}
-  - {fileID: 146710134731836422}
   turnWheel:
   - {fileID: 146378162449366460}
   - {fileID: 146765160961026858}
@@ -3187,23 +3278,17 @@ MonoBehaviour:
       outSlope: -1.8502825
       tangentMode: 0
     - serializedVersion: 2
-      time: 59.695793
-      value: 150.00046
-      inSlope: -16.149647
-      outSlope: -16.149647
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 90
-      value: 0
-      inSlope: 11.961952
-      outSlope: 11.961952
+      time: 139.66016
+      value: -13.871506
+      inSlope: -14.949257
+      outSlope: -14.949257
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   brakeForce: 9000
   steerAngle: 40
-  steerSpeed: 0.05
+  steerSpeed: 0.2
   centerOfMass: {fileID: 4507253121282828}
   steering: 0
   handbreak: 0
