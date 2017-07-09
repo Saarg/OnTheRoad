@@ -25,7 +25,7 @@ public class CheckPoint : MonoBehaviour {
 
     private void Update()
     {
-        if (startTime != 0)
+        if (startTime != 0 && Time.realtimeSinceStartup - startTime > 0.5)
             FreePlayMode.Instance.LapTimer.text = "Lap Time: " + (Time.realtimeSinceStartup - startTime).ToString("F2");
     }
 
@@ -39,7 +39,7 @@ public class CheckPoint : MonoBehaviour {
 
                 startID = name;
             }
-            else if (tag == "EntryPoint" && startTime != 0)
+            else if (tag == "EntryPoint" && Time.realtimeSinceStartup - startTime >= 1)
             {
                 endID = name;
                 RegisterTime();
@@ -60,6 +60,12 @@ public class CheckPoint : MonoBehaviour {
         }
         
         float currentTime = Time.realtimeSinceStartup - startTime;
+        // if current time < 5sec it's cheat
+        if (currentTime < 5)
+        {
+            Reset();
+            return;
+        }
 
         RecorededTime BestTime = new RecorededTime();
         if (File.Exists(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + startID + "-" + endID))
