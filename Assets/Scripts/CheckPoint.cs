@@ -23,6 +23,12 @@ public class CheckPoint : MonoBehaviour {
     static private float startTime = 0;
     static private List<float> checkPoints = new List<float>();
 
+    private void Update()
+    {
+        if (startTime != 0)
+            FreePlayMode.Instance.LapTimer.text = "Lap Time: " + (Time.realtimeSinceStartup - startTime).ToString("F2");
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.parent.tag == "Player")
@@ -67,6 +73,8 @@ public class CheckPoint : MonoBehaviour {
         if ((BestTime.lapTime == 0 || BestTime.lapTime > currentTime))
         {
             Debug.Log("New record!!! " + currentTime);
+            FreePlayMode.Instance.LapTimer.text = "New record!!! " + currentTime.ToString("F2");
+
             RecorededTime recordedTime = new RecorededTime();
             recordedTime.startID = startID;
             recordedTime.endID = endID;
@@ -82,8 +90,14 @@ public class CheckPoint : MonoBehaviour {
         else
         {
             Debug.Log("Lap time: " + currentTime);
+            FreePlayMode.Instance.LapTimer.text = "Lap Time: " + currentTime.ToString("F2");
         }
 
+        Reset();
+    }
+
+    public void InvokeReset()
+    {
         Reset();
     }
 

@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityStandardAssets.Utility;
 
 public class FreePlayMode : MonoBehaviour {
+    private static FreePlayMode instance;
 
     private Camera _camera;
 
@@ -19,6 +19,26 @@ public class FreePlayMode : MonoBehaviour {
     private Canvas pauseUI;
     [SerializeField]
     private RectTransform speedo;
+    [SerializeField]
+    private Text lapTimer;
+
+    public static FreePlayMode Instance
+    { get { return instance; } }
+
+    public Text LapTimer
+    { get { return lapTimer; } }
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        } else if (instance != this)
+        {
+            Debug.LogWarning("More than one FreePlayMode in the scene!!! deleting one...");
+            Destroy(this);
+        }
+    }
 
     void Start () {
         _camera = Camera.main;
