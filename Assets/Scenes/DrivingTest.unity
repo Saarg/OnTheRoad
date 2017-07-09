@@ -334,6 +334,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4679534354613960, guid: e98465cfa2bf6884cadac0db8087b088,
     type: 2}
   m_PrefabInternal: {fileID: 83812549}
+--- !u!146 &90720868 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146927207139406480, guid: 5f0df1af73be22647832c25d3f7782e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581908431}
 --- !u!1 &92945635
 GameObject:
   m_ObjectHideFlags: 0
@@ -5068,6 +5073,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!146 &1030755981 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146710134731836422, guid: 5f0df1af73be22647832c25d3f7782e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581908431}
 --- !u!1 &1035348361
 GameObject:
   m_ObjectHideFlags: 0
@@ -6086,6 +6096,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1313982699}
+--- !u!146 &1322364894 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146561354932270440, guid: 5f0df1af73be22647832c25d3f7782e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581908431}
 --- !u!1 &1333929762
 GameObject:
   m_ObjectHideFlags: 0
@@ -6151,6 +6166,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 116.28, y: 0, z: 0}
+--- !u!146 &1385711912 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146815153072751058, guid: 5f0df1af73be22647832c25d3f7782e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581908431}
 --- !u!1 &1387010231 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1582307400988758, guid: 8f3950455160a38419519c91f6218ea4,
@@ -6364,6 +6384,11 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 0264d9fcd4adff64dad92466a07e32f5, type: 3}
+--- !u!146 &1425268036 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146610872088930422, guid: 5f0df1af73be22647832c25d3f7782e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581908431}
 --- !u!1 &1451513538
 GameObject:
   m_ObjectHideFlags: 0
@@ -6432,6 +6457,11 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1451513538}
+--- !u!146 &1453305852 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146621410067867242, guid: 5f0df1af73be22647832c25d3f7782e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581908431}
 --- !u!1 &1454701484 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1401890964375066, guid: b380e4e3ac659f04282198fee58292de,
@@ -6632,6 +6662,11 @@ Transform:
   m_PrefabParentObject: {fileID: 4022579734117150, guid: 259f12d14caaf444b8d1486f13fff165,
     type: 2}
   m_PrefabInternal: {fileID: 1501211498}
+--- !u!146 &1502871532 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146349904901386654, guid: 5f0df1af73be22647832c25d3f7782e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581908431}
 --- !u!1001 &1521367469
 Prefab:
   m_ObjectHideFlags: 0
@@ -7288,6 +7323,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
         type: 2}
+      propertyPath: driveWheel.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
+        type: 2}
       propertyPath: motorTorque.m_Curve.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -7335,22 +7375,22 @@ Prefab:
     - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
         type: 2}
       propertyPath: motorTorque.m_Curve.Array.data[3].time
-      value: 90
+      value: 139.66016
       objectReference: {fileID: 0}
     - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
         type: 2}
       propertyPath: motorTorque.m_Curve.Array.data[3].value
-      value: 0
+      value: -13.871506
       objectReference: {fileID: 0}
     - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
         type: 2}
       propertyPath: motorTorque.m_Curve.Array.data[3].inSlope
-      value: -6.320565
+      value: -14.949257
       objectReference: {fileID: 0}
     - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
         type: 2}
       propertyPath: motorTorque.m_Curve.Array.data[3].outSlope
-      value: -6.320565
+      value: -14.949257
       objectReference: {fileID: 0}
     - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
         type: 2}
@@ -7371,9 +7411,58 @@ Prefab:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1956101275335882, guid: 5f0df1af73be22647832c25d3f7782e6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
+        type: 2}
+      propertyPath: driveWheel.Array.data[8]
+      value: 
+      objectReference: {fileID: 1605046973}
+    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
+        type: 2}
+      propertyPath: driveWheel.Array.data[9]
+      value: 
+      objectReference: {fileID: 1453305852}
+    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
+        type: 2}
+      propertyPath: driveWheel.Array.data[10]
+      value: 
+      objectReference: {fileID: 90720868}
+    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
+        type: 2}
+      propertyPath: driveWheel.Array.data[11]
+      value: 
+      objectReference: {fileID: 1385711912}
+    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
+        type: 2}
+      propertyPath: driveWheel.Array.data[12]
+      value: 
+      objectReference: {fileID: 1322364894}
+    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
+        type: 2}
+      propertyPath: driveWheel.Array.data[13]
+      value: 
+      objectReference: {fileID: 1502871532}
+    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
+        type: 2}
+      propertyPath: driveWheel.Array.data[14]
+      value: 
+      objectReference: {fileID: 1425268036}
+    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
+        type: 2}
+      propertyPath: driveWheel.Array.data[15]
+      value: 
+      objectReference: {fileID: 1030755981}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0df1af73be22647832c25d3f7782e6, type: 2}
   m_IsPrefabParent: 0
+--- !u!146 &1605046973 stripped
+WheelCollider:
+  m_PrefabParentObject: {fileID: 146959679461763366, guid: 5f0df1af73be22647832c25d3f7782e6,
+    type: 2}
+  m_PrefabInternal: {fileID: 1581908431}
 --- !u!4 &1605952482 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e,
