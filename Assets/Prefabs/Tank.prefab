@@ -196,13 +196,15 @@ GameObject:
   - component: {fileID: 4730174650611732}
   - component: {fileID: 54920153307103988}
   - component: {fileID: 114460310432674206}
+  - component: {fileID: 82888402926067182}
+  - component: {fileID: 114478840654045230}
   m_Layer: 0
   m_Name: Tank
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1452644878196386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1747,6 +1749,86 @@ MeshCollider:
   m_InflateMesh: 0
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300018, guid: bcd195aace5e24c4fb4d8fd37a652c26, type: 3}
+--- !u!82 &82888402926067182
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401890964375066}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114460310432674206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1800,12 +1882,29 @@ MonoBehaviour:
     m_RotationOrder: 0
   brakeForce: 500
   steerAngle: 40
-  steerSpeed: 0.07
+  steerSpeed: 0.2
   centerOfMass: {fileID: 4369246018223906}
   steering: 0
   handbreak: 0
   speed: 0
   gasParticle: {fileID: 0}
+--- !u!114 &114478840654045230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1401890964375066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46cf26a406bad0b4280494683f9c6af6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starting: {fileID: 8300000, guid: d18ace5281193f240b65e9b3bd9de7e7, type: 3}
+  rolling: {fileID: 8300000, guid: 15f3ec1c2a0ceb045b446bf52c023604, type: 3}
+  stopping: {fileID: 8300000, guid: 2f20f376f41546842b08243fc7576767, type: 3}
+  flatoutSpeed: 50
+  minPitch: 1.2
+  pitchSpeed: 0.05
 --- !u!146 &146386200299824008
 WheelCollider:
   m_ObjectHideFlags: 1

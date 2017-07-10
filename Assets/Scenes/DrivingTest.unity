@@ -1311,14 +1311,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
-    - target: {fileID: 1325445072582530, guid: 4aab92bbf7e245a4895988ef6a928388, type: 2}
-      propertyPath: m_Name
-      value: Muscle
-      objectReference: {fileID: 0}
-    - target: {fileID: 1325445072582530, guid: 4aab92bbf7e245a4895988ef6a928388, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4aab92bbf7e245a4895988ef6a928388, type: 2}
   m_IsPrefabParent: 0
@@ -1995,14 +1987,6 @@ Prefab:
     - target: {fileID: 4673781796005734, guid: c98160841e928904f86e08e0aa6b77b7, type: 2}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 1851412564337644, guid: c98160841e928904f86e08e0aa6b77b7, type: 2}
-      propertyPath: m_Name
-      value: Japan
-      objectReference: {fileID: 0}
-    - target: {fileID: 1851412564337644, guid: c98160841e928904f86e08e0aa6b77b7, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c98160841e928904f86e08e0aa6b77b7, type: 2}
@@ -3557,14 +3541,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 1766137938581410, guid: b8bc80041a157f54189cfa1211160580, type: 2}
-      propertyPath: m_Name
-      value: Unimog
-      objectReference: {fileID: 0}
-    - target: {fileID: 1766137938581410, guid: b8bc80041a157f54189cfa1211160580, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b8bc80041a157f54189cfa1211160580, type: 2}
   m_IsPrefabParent: 0
@@ -3755,14 +3731,6 @@ Prefab:
     - target: {fileID: 4396183508709392, guid: 13e53da96aab39247b9ea2638fcaeb14, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076688612965946, guid: 13e53da96aab39247b9ea2638fcaeb14, type: 2}
-      propertyPath: m_Name
-      value: 4Wheeler
-      objectReference: {fileID: 0}
-    - target: {fileID: 1076688612965946, guid: 13e53da96aab39247b9ea2638fcaeb14, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13e53da96aab39247b9ea2638fcaeb14, type: 2}
@@ -4059,10 +4027,6 @@ Prefab:
     - target: {fileID: 4654557321175316, guid: 8f3950455160a38419519c91f6218ea4, type: 2}
       propertyPath: m_RootOrder
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1582307400988758, guid: 8f3950455160a38419519c91f6218ea4, type: 2}
-      propertyPath: m_Name
-      value: Beetle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8f3950455160a38419519c91f6218ea4, type: 2}
@@ -5736,23 +5700,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 114460310432674206, guid: b380e4e3ac659f04282198fee58292de,
-        type: 2}
-      propertyPath: steerSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401890964375066, guid: b380e4e3ac659f04282198fee58292de, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401890964375066, guid: b380e4e3ac659f04282198fee58292de, type: 2}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1452644878196386, guid: b380e4e3ac659f04282198fee58292de, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b380e4e3ac659f04282198fee58292de, type: 2}
   m_IsPrefabParent: 0
@@ -7286,11 +7233,6 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
-        type: 2}
-      propertyPath: motorTorque.m_Curve.Array.size
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 4601230301811988, guid: 5f0df1af73be22647832c25d3f7782e6, type: 2}
       propertyPath: m_LocalPosition.x
       value: -13.34
@@ -7322,54 +7264,6 @@ Prefab:
     - target: {fileID: 4601230301811988, guid: 5f0df1af73be22647832c25d3f7782e6, type: 2}
       propertyPath: m_RootOrder
       value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
-        type: 2}
-      propertyPath: steerSpeed
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699637194821248, guid: 5f0df1af73be22647832c25d3f7782e6, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
-        type: 2}
-      propertyPath: motorTorque.m_Curve.Array.data[3].time
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
-        type: 2}
-      propertyPath: motorTorque.m_Curve.Array.data[3].value
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
-        type: 2}
-      propertyPath: motorTorque.m_Curve.Array.data[3].inSlope
-      value: -6.320565
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
-        type: 2}
-      propertyPath: motorTorque.m_Curve.Array.data[3].outSlope
-      value: -6.320565
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
-        type: 2}
-      propertyPath: motorTorque.m_Curve.Array.data[4].time
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
-        type: 2}
-      propertyPath: motorTorque.m_Curve.Array.data[4].inSlope
-      value: 11.961952
-      objectReference: {fileID: 0}
-    - target: {fileID: 114533404006784760, guid: 5f0df1af73be22647832c25d3f7782e6,
-        type: 2}
-      propertyPath: motorTorque.m_Curve.Array.data[4].outSlope
-      value: 11.961952
-      objectReference: {fileID: 0}
-    - target: {fileID: 1699637194821248, guid: 5f0df1af73be22647832c25d3f7782e6, type: 2}
-      propertyPath: m_TagString
-      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f0df1af73be22647832c25d3f7782e6, type: 2}
@@ -7885,14 +7779,6 @@ Prefab:
     - target: {fileID: 4742682653103026, guid: 16fd9a09448539a488ac6b2ff9584bd1, type: 2}
       propertyPath: m_RootOrder
       value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203538173588608, guid: 16fd9a09448539a488ac6b2ff9584bd1, type: 2}
-      propertyPath: m_Name
-      value: RaceCar
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203538173588608, guid: 16fd9a09448539a488ac6b2ff9584bd1, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 16fd9a09448539a488ac6b2ff9584bd1, type: 2}
@@ -9193,14 +9079,6 @@ Prefab:
     - target: {fileID: 4386708312614742, guid: 8d8d98c21cf47084c97bb4ea38e4346b, type: 2}
       propertyPath: m_RootOrder
       value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011406885681176, guid: 8d8d98c21cf47084c97bb4ea38e4346b, type: 2}
-      propertyPath: m_Name
-      value: Limo
-      objectReference: {fileID: 0}
-    - target: {fileID: 1011406885681176, guid: 8d8d98c21cf47084c97bb4ea38e4346b, type: 2}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8d8d98c21cf47084c97bb4ea38e4346b, type: 2}
