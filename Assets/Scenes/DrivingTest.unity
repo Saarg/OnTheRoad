@@ -3392,6 +3392,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 114164442293286024, guid: 13e53da96aab39247b9ea2638fcaeb14,
+        type: 2}
+      propertyPath: motorTorque.m_Curve.Array.data[2].time
+      value: 10.14184
+      objectReference: {fileID: 0}
+    - target: {fileID: 114164442293286024, guid: 13e53da96aab39247b9ea2638fcaeb14,
+        type: 2}
+      propertyPath: motorTorque.m_Curve.Array.data[2].value
+      value: 242.7344
+      objectReference: {fileID: 0}
+    - target: {fileID: 114164442293286024, guid: 13e53da96aab39247b9ea2638fcaeb14,
+        type: 2}
+      propertyPath: motorTorque.m_Curve.Array.data[2].inSlope
+      value: -7.8470592
+      objectReference: {fileID: 0}
+    - target: {fileID: 114164442293286024, guid: 13e53da96aab39247b9ea2638fcaeb14,
+        type: 2}
+      propertyPath: motorTorque.m_Curve.Array.data[2].outSlope
+      value: -7.8470592
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 13e53da96aab39247b9ea2638fcaeb14, type: 2}
   m_IsPrefabParent: 0
