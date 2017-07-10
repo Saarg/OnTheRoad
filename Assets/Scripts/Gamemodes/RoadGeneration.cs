@@ -1,8 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class RoadGeneration : MonoBehaviour {
+public class RoadGeneration : GameMode
+{
+    new public static RoadGeneration Instance
+    { get { return (RoadGeneration)instance; } }
 
     public GameObject[] prefabs;
 

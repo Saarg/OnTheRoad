@@ -3,9 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Utility;
 
-public class FreePlayMode : MonoBehaviour {
-    private static FreePlayMode instance;
-
+public class FreePlayMode : GameMode {
     private Camera _camera;
 
     [SerializeField]
@@ -25,22 +23,15 @@ public class FreePlayMode : MonoBehaviour {
     [SerializeField]
     private Text lapTimer;
 
-    public static FreePlayMode Instance
-    { get { return instance; } }
+    new public static FreePlayMode Instance
+    { get { return (FreePlayMode) instance; } }
 
     public Text LapTimer
     { get { return lapTimer; } }
 
-    private void Awake()
+    override protected void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        } else if (instance != this)
-        {
-            Debug.LogWarning("More than one FreePlayMode in the scene!!! deleting one...");
-            Destroy(this);
-        }
+        base.Awake();
 
         carDropDown.options.Clear();
         foreach (GameObject car in _cars)
