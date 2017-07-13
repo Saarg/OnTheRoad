@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33759541808203032}
   - component: {fileID: 23831697795726022}
   - component: {fileID: 64500672076295086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01_Tank_Body_Track_cover_02_17
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 33801049312716416}
   - component: {fileID: 23753775979916044}
   - component: {fileID: 64322852324971772}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01_Tank_Barrel_01_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: 33041425795240882}
   - component: {fileID: 23318114818462454}
   - component: {fileID: 64386904099211162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01_Tank_Body_Front_02_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ GameObject:
   - component: {fileID: 4435230180930632}
   - component: {fileID: 33483287108467754}
   - component: {fileID: 23779974744916250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_02_27
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 4869113607685532}
   - component: {fileID: 33242764214678228}
   - component: {fileID: 23535675040426960}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_02_25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4530645205402600}
   - component: {fileID: 33158538554206490}
   - component: {fileID: 23053956561267730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_02_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -126,7 +126,7 @@ GameObject:
   - component: {fileID: 4086306016818050}
   - component: {fileID: 33287008233434998}
   - component: {fileID: 23374426050813582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_02_18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 33059482798500168}
   - component: {fileID: 23216900041899492}
   - component: {fileID: 64872353608219824}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Bus_Back_01_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -162,7 +162,7 @@ GameObject:
   - component: {fileID: 33416218045776434}
   - component: {fileID: 23631443435221308}
   - component: {fileID: 64335241501436224}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01_Tank_Body_Front_03_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4426846113717584}
   - component: {fileID: 33290494798628448}
   - component: {fileID: 23431718127705830}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_02_26
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   - component: {fileID: 114460310432674206}
   - component: {fileID: 82888402926067182}
   - component: {fileID: 114478840654045230}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tank
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 4926855164147980}
   - component: {fileID: 33909617747089406}
   - component: {fileID: 23279520952306686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01_Tank_Body_Tracks_02_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4924617846750370}
   - component: {fileID: 146830179557522608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 33931940712777922}
   - component: {fileID: 23994301557069870}
   - component: {fileID: 64098485092681980}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01_Tank_Body_turret_03_13
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 4578125778734002}
   - component: {fileID: 33392041177869122}
   - component: {fileID: 23243201322015096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01_Tank_Body_Tracks_02_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 4811388406016096}
   - component: {fileID: 33311071358987624}
   - component: {fileID: 23505282888957388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_03_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -300,7 +300,7 @@ GameObject:
   - component: {fileID: 4713158915049440}
   - component: {fileID: 33630849162859098}
   - component: {fileID: 23417467935737986}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_03_28
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -316,7 +316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4754829743535058}
   - component: {fileID: 146386200299824008}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 4937664895834470}
   - component: {fileID: 33385673617398314}
   - component: {fileID: 23199225500362826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_02_20
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4296193839404552}
   - component: {fileID: 146510060180556788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -366,7 +366,7 @@ GameObject:
   - component: {fileID: 4928208528454640}
   - component: {fileID: 33113550412225536}
   - component: {fileID: 23447568094180324}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_03_23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -381,7 +381,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4369246018223906}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CenterOfMass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -397,7 +397,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4352594753053712}
   - component: {fileID: 146837307688105558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 4901598376556678}
   - component: {fileID: 33559383115913016}
   - component: {fileID: 23200045213254186}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 02_Car_Body_wheel_03_22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -432,7 +432,7 @@ GameObject:
   - component: {fileID: 33216213119275602}
   - component: {fileID: 23958762890708888}
   - component: {fileID: 64338031783130774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01_Tank_Body_Track_cover_02_16
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 33174974465394732}
   - component: {fileID: 23068129061488840}
   - component: {fileID: 64427662814670492}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 01_Tank_Body_01_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}

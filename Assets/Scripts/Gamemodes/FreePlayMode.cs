@@ -70,9 +70,7 @@ public class FreePlayMode : GameMode {
     }
 
     public void SelectCar(Int32 c)
-    {
-        CheckPoint.Reset();
-        
+    {        
         _cars[_curCar].SetActive(false);
 
         _curCar = c;

@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4917750015868544}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   - component: {fileID: 4296757692269058}
   - component: {fileID: 146396356945130780}
   - component: {fileID: 114749361965069096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4364962284352536}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RWheel01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -69,7 +69,7 @@ GameObject:
   - component: {fileID: 33831135421878952}
   - component: {fileID: 23964467807362790}
   - component: {fileID: 64516411947255064}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   - component: {fileID: 4767035633132882}
   - component: {fileID: 33207839920938796}
   - component: {fileID: 23360727513574740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_smallSports_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 4911034922506318}
   - component: {fileID: 146633278209855308}
   - component: {fileID: 114852364547075580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 4125268133735436}
   - component: {fileID: 146043454684765670}
   - component: {fileID: 114316494010551612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BLWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4481880181361714}
   - component: {fileID: 108207735336884168}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spotlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   - component: {fileID: 4981754713044306}
   - component: {fileID: 146963456593251286}
   - component: {fileID: 114944898816970250}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FRWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -168,7 +168,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4330435880245364}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LWheel01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,7 +183,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4010110386874908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RWheel01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -198,7 +198,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4977799436323376}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CenterOfMass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ GameObject:
   - component: {fileID: 114253300150423462}
   - component: {fileID: 82634335080543228}
   - component: {fileID: 114769295532320844}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Japan
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -232,7 +232,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4059846891183170}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LWheel01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,7 +249,7 @@ GameObject:
   - component: {fileID: 4404153092506234}
   - component: {fileID: 33504520206319904}
   - component: {fileID: 23797373215297924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel_smallSports_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 4582345900230304}
   - component: {fileID: 33679959754301666}
   - component: {fileID: 23870478105640060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -282,7 +282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4174973881581848}
   - component: {fileID: 108184056118901198}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spotlight (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 4381804125023288}
   - component: {fileID: 33527262477636948}
   - component: {fileID: 23292638843485854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: default
   m_TagString: Untagged
   m_Icon: {fileID: 0}

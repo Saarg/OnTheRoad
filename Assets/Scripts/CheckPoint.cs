@@ -9,107 +9,168 @@ using UnityEngine.SceneManagement;
 [Serializable]
 public class RecorededTime
 {
+    public RecorededTime()
+    {
+        checkPoints = new List<float>();
+        ghostPosition = new List<float[]>();
+        ghostRotation = new List<float[]>();
+    }
+
     public string startID;
     public string endID;
 
     public float lapTime;
     public List<float> checkPoints;
+    public List<float[]> ghostPosition;
+    public List<float[]> ghostRotation;
 }
 
-public class CheckPoint : MonoBehaviour {
-    static private string startID;
-    static private string endID;
+public delegate bool RaceEndEventHandler();
 
-    static private float startTime = 0;
-    static private List<float> checkPoints = new List<float>();
+public class CheckPoint : MonoBehaviour {
+    private float startTime = 0;
+
+    private RecorededTime currentLap;
+    private RecorededTime bestLap;
+
+    private float ghostTimer = 0;
+    private Transform player;
+    private Transform ghost;
+
+    [SerializeField]
+    private GameObject End;
+
+    public event RaceEndEventHandler Crossed;
+
+    private int index = 0;
+
+    private void Awake()
+    {
+        if (File.Exists(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + name + "-" + End.name))
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream = new FileStream(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + name + "-" + End.name, FileMode.Open, FileAccess.Read, FileShare.Read);
+            bestLap = (RecorededTime)formatter.Deserialize(stream);
+            stream.Close();
+        }
+        else
+        {
+            bestLap = new RecorededTime();
+        }
+        
+        End.GetComponent<CheckPoint>().Crossed += RegisterTime;
+    }
 
     private void Update()
     {
         if (startTime != 0 && Time.realtimeSinceStartup - startTime > 0.5)
             FreePlayMode.Instance.LapTimer.text = "Lap Time: " + (Time.realtimeSinceStartup - startTime).ToString("F2");
+
+        if (startTime != 0 && Time.realtimeSinceStartup - ghostTimer > 1f/60f)
+        {
+            float[] pos = new float[3];
+            pos[0] = player.position.x;
+            pos[1] = player.position.y;
+            pos[2] = player.position.z;
+
+            currentLap.ghostPosition.Add(pos);
+
+            float[] rot = new float[4];
+            rot[0] = player.rotation.x;
+            rot[1] = player.rotation.y;
+            rot[2] = player.rotation.z;
+            rot[3] = player.rotation.w;
+            currentLap.ghostRotation.Add(rot);
+
+            ghostTimer = Time.realtimeSinceStartup;
+
+            if (bestLap.lapTime != 0 && index < bestLap.ghostPosition.Count-1)
+            {
+                pos = bestLap.ghostPosition[index++];
+                ghost.position = new Vector3(pos[0], pos[1], pos[2]);
+                rot = bestLap.ghostRotation[index];
+                ghost.rotation = new Quaternion(rot[0], rot[1], rot[2], rot[3]);
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.parent.tag == "Player")
+        if (other.transform.parent &&   other.transform.parent.tag == "Player")
         {
-            if (tag == "EntryPoint" && startTime == 0)
+
+            bool endedRace = false;
+            try
+            {
+                endedRace = Crossed();
+            } catch { }
+
+            if (!endedRace && tag == "EntryPoint" && startTime == 0)
             {
                 startTime = Time.realtimeSinceStartup;
+                player = other.transform.parent;
 
-                startID = name;
-            }
-            else if (tag == "EntryPoint" && Time.realtimeSinceStartup - startTime >= 1)
-            {
-                endID = name;
-                RegisterTime();
-            }
-            else if (startTime != 0)
-            {
-                checkPoints.Add(Time.realtimeSinceStartup - startTime);
+                currentLap = new RecorededTime();
+
+                currentLap.startID = name;
+
+                if (bestLap.lapTime != 0)
+                {
+                    ghost = Instantiate(player.gameObject, player.position, player.rotation).transform;
+                    ghost.tag = "Ghost";
+                    ghost.GetComponent<Rigidbody>().isKinematic = true;
+
+                    foreach (Collider c in ghost.GetComponentsInChildren<Collider>())
+                    {
+                        c.isTrigger = true;
+                        c.gameObject.layer = LayerMask.NameToLayer("Ghost");
+                    }
+                }
             }
         }
     }
 
-    private void RegisterTime()
+    private bool RegisterTime()
     {
-        if (startID == endID)
+        if (currentLap == null || Time.realtimeSinceStartup - startTime < 5 || startTime == 0)
         {
-            Reset();
-            return;
-        }
-        
-        float currentTime = Time.realtimeSinceStartup - startTime;
-        // if current time < 5sec it's cheat
-        if (currentTime < 5)
-        {
-            Reset();
-            return;
+            ResetTime();
+            return false;
         }
 
-        RecorededTime BestTime = new RecorededTime();
-        if (File.Exists(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + startID + "-" + endID))
+        currentLap.lapTime = Time.realtimeSinceStartup - startTime;
+
+        currentLap.endID = End.name;
+
+        if (bestLap.lapTime == 0 || (bestLap.lapTime == 0 || bestLap.lapTime > currentLap.lapTime))
         {
+            Debug.Log("New record!!! " + currentLap.lapTime);
+            FreePlayMode.Instance.LapTimer.text = "New record!!! " + currentLap.lapTime.ToString("F2");
+
+            bestLap = currentLap;
+
             IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + startID + "-" + endID, FileMode.Open, FileAccess.Read, FileShare.Read);
-            BestTime = (RecorededTime)formatter.Deserialize(stream);
+            Stream stream = new FileStream(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + name + "-" + End.name, FileMode.Create, FileAccess.Write, FileShare.None);
+            formatter.Serialize(stream, currentLap);
             stream.Close();
-        }
-
-        if ((BestTime.lapTime == 0 || BestTime.lapTime > currentTime))
-        {
-            Debug.Log("New record!!! " + currentTime);
-            FreePlayMode.Instance.LapTimer.text = "New record!!! " + currentTime.ToString("F2");
-
-            RecorededTime recordedTime = new RecorededTime();
-            recordedTime.startID = startID;
-            recordedTime.endID = endID;
-            recordedTime.lapTime = currentTime;
-            recordedTime.checkPoints = checkPoints;
-
-            // Serialize token and decoded payload
-            IFormatter formatter = new BinaryFormatter();
-            Stream stream = new FileStream(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + startID + "-" + endID, FileMode.Create, FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, recordedTime);
-            stream.Close();
+            
+            
         }
         else
         {
-            Debug.Log("Lap time: " + currentTime);
-            FreePlayMode.Instance.LapTimer.text = "Lap Time: " + currentTime.ToString("F2");
+            Debug.Log("Lap time: " + currentLap.lapTime);
+            FreePlayMode.Instance.LapTimer.text = "Lap Time: " + currentLap.lapTime.ToString("F2");
         }
 
-        Reset();
+        ResetTime();
+        return true;
     }
 
-    public void InvokeReset()
+    public void ResetTime()
     {
-        Reset();
-    }
-
-    static public void Reset()
-    {
+        if (ghost != null)
+            Destroy(ghost.gameObject);
+        index = 0;
         startTime = 0;
-        checkPoints.Clear();
     }
 }
