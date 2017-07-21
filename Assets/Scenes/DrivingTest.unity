@@ -1962,15 +1962,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4679534354613960, guid: e98465cfa2bf6884cadac0db8087b088, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 32.885
+      value: 33.019
       objectReference: {fileID: 0}
     - target: {fileID: 4679534354613960, guid: e98465cfa2bf6884cadac0db8087b088, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.46
+      value: 8.14
       objectReference: {fileID: 0}
     - target: {fileID: 4679534354613960, guid: e98465cfa2bf6884cadac0db8087b088, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -6.121
+      value: -5.9909997
       objectReference: {fileID: 0}
     - target: {fileID: 4679534354613960, guid: e98465cfa2bf6884cadac0db8087b088, type: 2}
       propertyPath: m_LocalRotation.x
@@ -4227,7 +4227,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 10.218
+      value: 10.05
       objectReference: {fileID: 0}
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -5634,15 +5634,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 32.698
+      value: 32.832005
       objectReference: {fileID: 0}
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.325
+      value: 8.005
       objectReference: {fileID: 0}
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -16.068
+      value: -16.18
       objectReference: {fileID: 0}
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -5926,8 +5926,8 @@ MonoBehaviour:
   m_Script: {fileID: 1077351063, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_HorizontalAxis: joystick1 axis x
-  m_VerticalAxis: joystick1 axis y
+  m_HorizontalAxis: HorizontalUI
+  m_VerticalAxis: VerticalUI
   m_SubmitButton: Submit
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
@@ -6027,15 +6027,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 35.697
+      value: 35.831
       objectReference: {fileID: 0}
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 7.46
+      value: 8.14
       objectReference: {fileID: 0}
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 3.826
+      value: 3.956
       objectReference: {fileID: 0}
     - target: {fileID: 4071866805900098, guid: ba5cd666d30bb7b41acec9425a3e4b4e, type: 2}
       propertyPath: m_LocalRotation.x
