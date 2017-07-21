@@ -1,0 +1,6 @@
+/*ASEBEGIN
+Version=0.1
+Node#AmplifyShaderEditor.StandardSurfaceOutputNode#0#798,225#True#DefaultUnlit
+Node#AmplifyShaderEditor.FloatNode#1#633,235#Constant#_MyFloatNodeProperty#My FloatNode Property#0
+WireConnection#0#0#1#0
+ASEEND*/

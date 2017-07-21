@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: SubstanceExample
+  m_Shader: {fileID: 4800000, guid: 458f59ae144d107418c60e12f65312e6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - Rock_Ground_ambientOcclusion:
+        m_Texture: {fileID: -46950801, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Rock_Ground_basecolor:
+        m_Texture: {fileID: -1041662269, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Rock_Ground_height:
+        m_Texture: {fileID: 1940543496, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Rock_Ground_metallic:
+        m_Texture: {fileID: -1312216576, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Rock_Ground_normal:
+        m_Texture: {fileID: -358453896, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Rock_Ground_roughness:
+        m_Texture: {fileID: 1252539123, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Snow_Bricks_ambientOcclusion:
+        m_Texture: {fileID: -1580054264, guid: 7af3ece29374c234f9406a3bb35df76c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Snow_Bricks_ambientocclusion:
+        m_Texture: {fileID: -956289377, guid: 7af3ece29374c234f9406a3bb35df76c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Snow_Bricks_basecolor:
+        m_Texture: {fileID: 1671735402, guid: 7af3ece29374c234f9406a3bb35df76c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Snow_Bricks_height:
+        m_Texture: {fileID: 852425917, guid: 7af3ece29374c234f9406a3bb35df76c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Snow_Bricks_metallic:
+        m_Texture: {fileID: 923826857, guid: 7af3ece29374c234f9406a3bb35df76c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Snow_Bricks_normal:
+        m_Texture: {fileID: 693382239, guid: 7af3ece29374c234f9406a3bb35df76c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Snow_Bricks_roughness:
+        m_Texture: {fileID: -978596656, guid: 7af3ece29374c234f9406a3bb35df76c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Mask:
+        m_Texture: {fileID: 2800000, guid: 9f9f8b99c58315042b7616b18df5e33b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Rock_Ground_ambientOcclusion:
+        m_Texture: {fileID: -46950801, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Rock_Ground_basecolor:
+        m_Texture: {fileID: -1041662269, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Rock_Ground_height:
+        m_Texture: {fileID: 1940543496, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Rock_Ground_normal:
+        m_Texture: {fileID: -358453896, guid: 30f7b952308350a478dd06448e2476a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _UTex01:
+        m_Texture: {fileID: 2800000, guid: aace9c071dc085f449225955fd3f1351, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WhitePortOutline:
+        m_Texture: {fileID: 2800000, guid: 56277f370fb77a448a152bcd2e3a9077, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _HeightStrength: 0.6144089
+    - _MaskClipValue: 0.5
+    - _TessMax: 10
+    - _TessMin: 0
+    - _TessPhongStrength: 0.5
+    - _TessValue: 30
+    - __dirty: 0
+    m_Colors: []

@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 907b858c546fc4bf7b5b8fe96fa79509
+timeCreated: 1500655898
+licenseType: Free
+ShaderImporter:
+  defaultTextures:
+  - _SmallWaves: {fileID: 2800000, guid: dd2fd2df93418444c8e280f1d34deeb5, type: 3}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
