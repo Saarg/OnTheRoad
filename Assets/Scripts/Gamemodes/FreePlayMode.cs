@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityStandardAssets.Utility;
+using Controls;
 
 public class FreePlayMode : GameMode {
     private Camera _camera;
@@ -52,12 +53,12 @@ public class FreePlayMode : GameMode {
     }
 
     void Update () {
-        if (Input.GetButtonDown("Submit"))
+		if (Controls.MultiOSControls.Instance.getValue("Submit") != 0)
         {
             SelectCar(_curCar);
         }
 
-        if (Input.GetButtonDown("Cancel"))
+		if (Controls.MultiOSControls.Instance.getValue("Cancel") != 0)
         {
             Pause();
         }

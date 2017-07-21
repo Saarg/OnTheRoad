@@ -2,13 +2,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Controls;
 
 [RequireComponent(typeof(Rigidbody))]
 
 public class WheelVehicle : MonoBehaviour {
 
     [Header("Inputs")]
-    public string throtleInput = "Vertical";
+	public string throtleInput = "Throtle";
+    public string breakInput = "Break";
     public string turnInput = "Horizontal";
     public bool ignoreThrotleInput { get; set; }
     public bool ignoreThrotleExternalInput { get; set; }
@@ -61,7 +63,7 @@ public class WheelVehicle : MonoBehaviour {
         else if (!ignoreThrotleInput && throtleInput != "" && throtleInput != null)
         {
             // throtle = Input.GetAxis(throtleInput) != 0 ? Input.GetAxis(throtleInput) : Mathf.Clamp(throtle, -1, 1);
-            throtle = Input.GetAxis(throtleInput); 
+			throtle = Controls.MultiOSControls.Instance.getValue(throtleInput) - Controls.MultiOSControls.Instance.getValue(breakInput); 
         }
 
         if (ignoreTurnInput && !ignoreTurnExternalInput)
@@ -75,7 +77,7 @@ public class WheelVehicle : MonoBehaviour {
         {
             foreach (WheelCollider wheel in turnWheel)
             {
-                wheel.steerAngle = Mathf.Lerp(wheel.steerAngle, Input.GetAxis(turnInput) * steerAngle, steerSpeed);
+				wheel.steerAngle = Mathf.Lerp(wheel.steerAngle, Controls.MultiOSControls.Instance.getValue(turnInput) * steerAngle, steerSpeed);
             }
         }
 

@@ -204,7 +204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1452644878196386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1840,7 +1840,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c241727a8fc83048b56bdd0b450f8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  throtleInput: Vertical
+  throtleInput: Throtle
+  breakInput: Break
   turnInput: Horizontal
   driveWheel:
   - {fileID: 146830179557522608}
