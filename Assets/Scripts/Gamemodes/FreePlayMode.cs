@@ -21,14 +21,9 @@ public class FreePlayMode : GameMode {
     private Canvas pauseUI;
     [SerializeField]
     private RectTransform speedo;
-    [SerializeField]
-    private Text lapTimer;
 
     new public static FreePlayMode Instance
     { get { return (FreePlayMode) instance; } }
-
-    public Text LapTimer
-    { get { return lapTimer; } }
 
     override protected void Awake()
     {
@@ -100,10 +95,5 @@ public class FreePlayMode : GameMode {
 
         pauseUI.gameObject.SetActive(false);
         inGameUI.gameObject.SetActive(true);
-    }
-
-    public void Quit()
-    {
-        Application.Quit();
     }
 }

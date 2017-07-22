@@ -1,0 +1,68 @@
+# Made using Asset Forge (www.assetforge.io) version 1.2.1 
+
+newmtl stone (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/stone (Instance).png
+
+newmtl lightStone (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8117647 0.8078431 0.854902 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/lightStone (Instance).png
+
+newmtl stone (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/stone (Instance) (Instance).png
+
+newmtl wood (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.7843137 0.6156863 0.5176471 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/wood (Instance) (Instance).png
+
+newmtl lightStone (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8117647 0.8078431 0.854902 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/lightStone (Instance) (Instance).png
+
+newmtl roof (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.9799707 0.6050745 0.492956 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/roof (Instance) (Instance).png
+
+newmtl glass (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.7700207 0.7464134 0.7326881 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/glass (Instance).png
+
+newmtl glass (Instance) (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.2980392 0.3137255 0.3647059 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/glass (Instance) (Instance).png
+
+newmtl roof (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.9799707 0.6050745 0.492956 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/roof (Instance).png
+
+newmtl wood (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.7843137 0.6156863 0.5176471 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/wood (Instance).png
+
+newmtl _defaultMat (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8484671 0.9772527 0.9999777 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/_defaultMat (Instance).png
+

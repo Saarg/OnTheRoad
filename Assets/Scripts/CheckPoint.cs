@@ -37,14 +37,13 @@ public class CheckPoint : MonoBehaviour {
     private Transform player;
     private Transform ghost;
 
-    [SerializeField]
-    private GameObject End;
+    public GameObject End;
 
     public event RaceEndEventHandler Crossed;
 
     private int index = 0;
 
-    private void Awake()
+    private void OnEnable()
     {
         if (File.Exists(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + name + "-" + End.name))
         {
@@ -64,7 +63,7 @@ public class CheckPoint : MonoBehaviour {
     private void Update()
     {
         if (startTime != 0 && Time.realtimeSinceStartup - startTime > 0.5)
-            FreePlayMode.Instance.LapTimer.text = "Lap Time: " + (Time.realtimeSinceStartup - startTime).ToString("F2");
+			GameMode.Instance.LapTimer.text = "Lap Time: " + (Time.realtimeSinceStartup - startTime).ToString("F2");
 
         if (startTime != 0 && Time.realtimeSinceStartup - ghostTimer > 1f/60f)
         {
@@ -145,7 +144,7 @@ public class CheckPoint : MonoBehaviour {
         if (bestLap.lapTime == 0 || (bestLap.lapTime == 0 || bestLap.lapTime > currentLap.lapTime))
         {
             Debug.Log("New record!!! " + currentLap.lapTime);
-            FreePlayMode.Instance.LapTimer.text = "New record!!! " + currentLap.lapTime.ToString("F2");
+			GameMode.Instance.LapTimer.text = "New record!!! " + currentLap.lapTime.ToString("F2");
 
             bestLap = currentLap;
 
@@ -159,7 +158,7 @@ public class CheckPoint : MonoBehaviour {
         else
         {
             Debug.Log("Lap time: " + currentLap.lapTime);
-            FreePlayMode.Instance.LapTimer.text = "Lap Time: " + currentLap.lapTime.ToString("F2");
+			GameMode.Instance.LapTimer.text = "Lap Time: " + currentLap.lapTime.ToString("F2");
         }
 
         ResetTime();

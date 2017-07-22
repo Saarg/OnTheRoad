@@ -1,0 +1,30 @@
+# Made using Asset Forge (www.assetforge.io) version 1.2.1 
+
+newmtl Basic Material 002 (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 0.9954549 0.9818197 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/Basic Material 002 (Instance).png
+
+newmtl New material 001 (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.4275 0.3098 0.1882 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/New material 001 (Instance).png
+
+newmtl roof (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8862745 0.4666667 0.3411765 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/roof (Instance).png
+
+newmtl wood (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.7843137 0.6156863 0.5176471 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl _defaultMat (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
