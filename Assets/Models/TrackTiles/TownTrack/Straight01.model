@@ -1,0 +1,26 @@
+# Made using Asset Forge (1.2.1)
+
+:models
+City/roof_side[(1, -0,1, 1);(0,0, 0,0, 0,0);(1,0, 1,0, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_side[(1, -0,1, 0);(0,0, 0,0, 0,0);(1,0, 1,0, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_side[(1, -0,1, -1);(0,0, 0,0, 0,0);(1,0, 1,0, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_side[(-1, -0,1, 1);(0,0, 180,0, 0,0);(1,0, 1,0, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_side[(-1, -0,1, 0);(0,0, 180,0, 0,0);(1,0, 1,0, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_side[(-1, -0,1, -1);(0,0, 180,0, 0,0);(1,0, 1,0, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_square[(0, -0,1, 1);(0,0, 0,0, 0,0);(1,0, 1,0, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_square[(0, -0,1, 0);(0,0, 0,0, 0,0);(1,0, 1,0, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_square[(0, -0,1, -1);(0,0, 0,0, 0,0);(1,0, 1,0, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_square[(-2,05, 0, 1);(0,0, 0,0, 0,0);(0,9, 0,9, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_square[(-2,05, 0, 0);(0,0, 0,0, 0,0);(0,9, 0,9, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_square[(-2,05, 0, -1);(0,0, 0,0, 0,0);(0,9, 0,9, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_square[(2,05, 0, 1);(0,0, 0,0, 0,0);(0,9, 0,9, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_square[(2,05, 0, 0);(0,0, 0,0, 0,0);(0,9, 0,9, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+City/roof_square[(2,05, 0, -1);(0,0, 0,0, 0,0);(0,9, 0,9, 1,0);(0,0, 0,0, 0,0);stone+lightStone]
+
+:materials
+stone[RGBA(0,667, 0,663, 0,737, 1,000);]
+lightStone[RGBA(0,812, 0,808, 0,855, 1,000);]
+
+:textures
+
+:extra

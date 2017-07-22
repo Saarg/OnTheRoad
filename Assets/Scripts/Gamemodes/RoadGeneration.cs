@@ -81,9 +81,9 @@ public class RoadGeneration : GameMode
             {
                 turnCount = 0;
             }
-            else if (Mathf.Abs(futureTurnCount) >= 3)
+			else if (Mathf.Abs(futureTurnCount) >= 3)
             {
-                while (isDown(toCreate) == 0)
+				while (isDown(toCreate) == 0)
                 {
 					toCreate = track[curTrack].Tiles[Random.Range(0, 255) % track[curTrack].Tiles.Length];
                 }
@@ -143,7 +143,8 @@ public class RoadGeneration : GameMode
 
     protected int isTurn(GameObject t)
     {
-        float diff = t.transform.Find("EntryPoint").transform.eulerAngles.y - t.transform.Find("ExitPoint").transform.eulerAngles.y;
+        float diff = 180 + t.transform.Find("EntryPoint").transform.eulerAngles.y - t.transform.Find("ExitPoint").transform.eulerAngles.y;
+		Debug.Log (diff);
 
         if (diff == 0)
         {
