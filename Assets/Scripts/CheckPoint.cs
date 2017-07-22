@@ -65,32 +65,36 @@ public class CheckPoint : MonoBehaviour {
         if (startTime != 0 && Time.realtimeSinceStartup - startTime > 0.5)
 			GameMode.Instance.LapTimer.text = "Lap Time: " + (Time.realtimeSinceStartup - startTime).ToString("F2");
 
-        if (startTime != 0 && Time.realtimeSinceStartup - ghostTimer > 1f/60f)
-        {
-            float[] pos = new float[3];
-            pos[0] = player.position.x;
-            pos[1] = player.position.y;
-            pos[2] = player.position.z;
+		if (startTime != 0 && Time.realtimeSinceStartup - ghostTimer > 0.1f) {
+			float[] pos = new float[3];
+			pos [0] = player.position.x;
+			pos [1] = player.position.y;
+			pos [2] = player.position.z;
 
-            currentLap.ghostPosition.Add(pos);
+			currentLap.ghostPosition.Add (pos);
 
-            float[] rot = new float[4];
-            rot[0] = player.rotation.x;
-            rot[1] = player.rotation.y;
-            rot[2] = player.rotation.z;
-            rot[3] = player.rotation.w;
-            currentLap.ghostRotation.Add(rot);
+			float[] rot = new float[4];
+			rot [0] = player.rotation.x;
+			rot [1] = player.rotation.y;
+			rot [2] = player.rotation.z;
+			rot [3] = player.rotation.w;
+			currentLap.ghostRotation.Add (rot);
 
-            ghostTimer = Time.realtimeSinceStartup;
+			ghostTimer = Time.realtimeSinceStartup;
 
-            if (bestLap.lapTime != 0 && index < bestLap.ghostPosition.Count-1)
-            {
-                pos = bestLap.ghostPosition[index++];
-                ghost.position = new Vector3(pos[0], pos[1], pos[2]);
-                rot = bestLap.ghostRotation[index];
-                ghost.rotation = new Quaternion(rot[0], rot[1], rot[2], rot[3]);
-            }
-        }
+			if (bestLap.lapTime != 0 && index < bestLap.ghostPosition.Count - 1) {
+				index++;
+			}
+		} else if (startTime != 0 && bestLap.lapTime != 0 && index < bestLap.ghostPosition.Count - 2) {
+			Vector3 oldPos = new Vector3 (bestLap.ghostPosition [index][0], bestLap.ghostPosition [index][1], bestLap.ghostPosition [index][2]);
+			Vector3 newPos = new Vector3 (bestLap.ghostPosition [index+1][0], bestLap.ghostPosition [index+1][1], bestLap.ghostPosition [index+1][2]);
+
+			ghost.position = Vector3.Lerp (oldPos, newPos, (Time.realtimeSinceStartup - ghostTimer) * 10f);
+
+			Quaternion oldRot = new Quaternion (bestLap.ghostRotation [index][0], bestLap.ghostRotation [index][1], bestLap.ghostRotation [index][2], bestLap.ghostRotation [index][3]);
+			Quaternion newRot = new Quaternion (bestLap.ghostRotation [index+1][0], bestLap.ghostRotation [index+1][1], bestLap.ghostRotation [index+1][2], bestLap.ghostRotation [index+1][3]);
+			ghost.rotation = Quaternion.Lerp (oldRot, newRot, (Time.realtimeSinceStartup - ghostTimer) * 10f);
+		}
     }
 
     private void OnTriggerEnter(Collider other)

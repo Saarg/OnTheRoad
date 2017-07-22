@@ -1873,6 +1873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3124765f697e5e439ec2f589bd5221d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lapTimer: {fileID: 0}
 --- !u!4 &1908256577
 Transform:
   m_ObjectHideFlags: 0

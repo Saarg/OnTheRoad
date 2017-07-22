@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Utility;
 using Controls;
 
 public class RoadGeneration : GameMode
@@ -9,8 +10,10 @@ public class RoadGeneration : GameMode
 
 	public int seed;
 
-	public GameObject car;
-    public GameObject[] prefabs;
+	public int curTrack = 0;
+	public TrackType[] track;
+
+	private GameObject car;
 
 	[SerializeField]
 	private RectTransform speedo;
@@ -23,6 +26,9 @@ public class RoadGeneration : GameMode
 	protected CheckPoint finish;
 
 	void Start() {
+		car = Instantiate (track[curTrack].Car, Vector3.up * 2, Quaternion.identity);
+		Camera.main.GetComponent<SmoothFollow> ().Target = car.transform;
+
 		Generate ();
 	}
 
@@ -65,9 +71,9 @@ public class RoadGeneration : GameMode
 		seedInput.text = seed.ToString();
 		Random.InitState (seed);
 
-        for(int i = 0; i < 60; i++)
+		for(int i = 0; i < track[curTrack].length; i++)
         {
-            GameObject toCreate = prefabs[Random.Range(0, 255) % prefabs.Length];
+			GameObject toCreate = track[curTrack].Tiles[Random.Range(0, 255) % track[curTrack].Tiles.Length];
             int futureTurnCount = turnCount + isTurn(toCreate);
 
             /** Detecting if we must enforce a height change **/
@@ -79,7 +85,7 @@ public class RoadGeneration : GameMode
             {
                 while (isDown(toCreate) == 0)
                 {
-                    toCreate = prefabs[Random.Range(0, 255) % prefabs.Length];
+					toCreate = track[curTrack].Tiles[Random.Range(0, 255) % track[curTrack].Tiles.Length];
                 }
                 turnCount = 0;
             }
@@ -93,7 +99,7 @@ public class RoadGeneration : GameMode
 
 			if (i == 0)
 				startTile = lastCreated;
-			if (i == 59)
+			if (i == track[curTrack].length-1)
 				finishTile = lastCreated;
 
             /** Aligning **/
@@ -135,9 +141,9 @@ public class RoadGeneration : GameMode
 		}
     }
 
-    protected int isTurn(GameObject track)
+    protected int isTurn(GameObject t)
     {
-        float diff = track.transform.Find("EntryPoint").transform.eulerAngles.y - track.transform.Find("ExitPoint").transform.eulerAngles.y;
+        float diff = t.transform.Find("EntryPoint").transform.eulerAngles.y - t.transform.Find("ExitPoint").transform.eulerAngles.y;
 
         if (diff == 0)
         {
@@ -147,9 +153,9 @@ public class RoadGeneration : GameMode
         else return -1;
     }
 
-    protected int isDown(GameObject track)
+    protected int isDown(GameObject t)
     {
-        float diff = track.transform.Find("EntryPoint").transform.position.y - track.transform.Find("ExitPoint").transform.position.y;
+        float diff = t.transform.Find("EntryPoint").transform.position.y - t.transform.Find("ExitPoint").transform.position.y;
         if (Mathf.Abs(diff) < 0.2) //small range to avoir rounding errors
         {
             return 0;
@@ -157,4 +163,16 @@ public class RoadGeneration : GameMode
         if (diff > 0) return 1;
         else return -1;
     }
+
+	public void SelectTrack(System.Int32 t)
+	{    
+		curTrack = t;
+
+		Destroy (car);
+
+		car = Instantiate (track[curTrack].Car, Vector3.up * 2, Quaternion.identity);
+		Camera.main.GetComponent<SmoothFollow> ().Target = car.transform;
+
+		Generate ();
+	}
 }
