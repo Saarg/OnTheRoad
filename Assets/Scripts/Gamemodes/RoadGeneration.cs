@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityStandardAssets.Utility;
 using Controls;
@@ -20,6 +21,12 @@ public class RoadGeneration : GameMode
 	[SerializeField]
 	private Text seedInput;
 
+	[SerializeField]
+	private Text pauseText;
+	[SerializeField]
+	private EventSystem eventSystem;
+	private float pauseTimer;
+
     protected int turnCount = 0;
 
 	protected CheckPoint start;
@@ -33,6 +40,18 @@ public class RoadGeneration : GameMode
 	}
 
 	void Update() {
+		if (Controls.MultiOSControls.Instance.getValue("Cancel") != 0 && Time.realtimeSinceStartup - pauseTimer > 1f)
+		{
+			pauseTimer = Time.realtimeSinceStartup;
+
+			eventSystem.sendNavigationEvents = !pauseText.gameObject.activeSelf;
+			car.GetComponent<WheelVehicle>().handbreak = !pauseText.gameObject.activeSelf;
+
+			Time.timeScale = pauseText.gameObject.activeSelf ? 1 : 0;
+
+			pauseText.gameObject.SetActive (!pauseText.gameObject.activeSelf);
+		}
+
 		if (Controls.MultiOSControls.Instance.getValue("Submit") != 0)
 		{
 			start.ResetTime ();
@@ -42,6 +61,8 @@ public class RoadGeneration : GameMode
 			car.transform.rotation = Quaternion.identity;
 			car.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			car.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
+
+			Generate ();
 		}
 
 		float angle = Mathf.Lerp(speedo.rotation.ToEuler().z, -(car.GetComponent<WheelVehicle>().speed) / 220 * 180, 0.53f);
@@ -50,7 +71,11 @@ public class RoadGeneration : GameMode
 	}
 
 	public void UpdateSeed(string s) {
-		seed = System.Int32.Parse(s);
+		try {
+			seed = System.Int32.Parse(s);
+		} catch {
+			seed = 0;
+		}
 	}
 
     public void Generate () {
@@ -117,7 +142,7 @@ public class RoadGeneration : GameMode
 		if (startTile != gameObject && finishTile != gameObject) {
 			startTile.SetActive (false);
 			startTile.tag = "EntryPoint";
-			startTile.name = seed.ToString () + "-Start";
+			startTile.name = track[curTrack].name + "-Start";
 			BoxCollider b1 = startTile.AddComponent<BoxCollider> ();
 			b1.size = new Vector3 (6, 4, 6);
 			b1.center = Vector3.up * 2;
@@ -144,7 +169,6 @@ public class RoadGeneration : GameMode
     protected int isTurn(GameObject t)
     {
         float diff = 180 + t.transform.Find("EntryPoint").transform.eulerAngles.y - t.transform.Find("ExitPoint").transform.eulerAngles.y;
-		Debug.Log (diff);
 
         if (diff == 0)
         {
@@ -176,4 +200,5 @@ public class RoadGeneration : GameMode
 
 		Generate ();
 	}
+
 }
