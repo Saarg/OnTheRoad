@@ -1589,6 +1589,8 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: Town
       m_Image: {fileID: 0}
+    - m_Text: RaceTown
+      m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -2790,6 +2792,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2d6e1cb755e045f8b472bac254e3b2c, type: 2}
   - {fileID: 11400000, guid: da723b8cbb6104eb7ae417f297f28c62, type: 2}
   - {fileID: 11400000, guid: 5e982ec32d9e7467cb4d59073045f476, type: 2}
+  - {fileID: 11400000, guid: 69a9cefec4da545958b8d2039896d575, type: 2}
   speedo: {fileID: 475432118}
   seedInput: {fileID: 599810648}
   pauseText: {fileID: 1019070304}

@@ -1,0 +1,67 @@
+# Made using Asset Forge (www.assetforge.io) version 1.2.1 
+
+newmtl customMaterial6
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl customMaterial7
+Ka 0.000000 0.000000 0.000000 
+Kd 0.630033 0.6223969 0.6223969 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/customMaterial7.png
+
+newmtl customMaterial5
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/customMaterial5.png
+
+newmtl Green_leafs (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.4581811 0.6999958 0.4702504 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/Green_leafs (Instance).png
+
+newmtl Light_Wood (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.937255 0.764706 0.501961 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl roof (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.8862745 0.4666667 0.3411765 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl _defaultMat (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl blueSteel (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.02745098 0.4 0.6941177 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/blueSteel (Instance).png
+
+newmtl Wood (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.5900189 0.4988512 0.2860709 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl Water (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 1 1 1 
+Ks 0.330000 0.330000 0.330000 
+map_Kd Textures/Water (Instance).png
+
+newmtl Stone (Instance)
+Ka 0.000000 0.000000 0.000000 
+Kd 0.72549 0.752941 0.788235 
+Ks 0.330000 0.330000 0.330000 
+
+newmtl customMaterial10
+Ka 0.000000 0.000000 0.000000 
+Kd 0.5199945 0.4461008 0.3088467 
+Ks 0.330000 0.330000 0.330000 
+
