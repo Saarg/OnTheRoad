@@ -2031,8 +2031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 416295144}
-  distance: 10
-  height: 5
+  distance: 5
+  height: 1
   rotationDamping: 0
   heightDamping: 0
 --- !u!20 &1450393867

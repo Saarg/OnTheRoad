@@ -36,15 +36,17 @@ public class RoadGeneration : GameMode
 		car = Instantiate (track[curTrack].Car, Vector3.up * 2, Quaternion.identity);
 		Camera.main.GetComponent<SmoothFollow> ().Target = car.transform;
 
-		car.transform.position = Vector3.up * 2;
-		car.transform.rotation = Quaternion.identity;
 		car.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 		car.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
+
+		car.GetComponent<Rigidbody> ().isKinematic = true;
 
 		Generate ();
 	}
 
 	void Update() {
+		car.GetComponent<Rigidbody> ().isKinematic = false;
+
 		if (Controls.MultiOSControls.Instance.getValue("Cancel") != 0 && Time.realtimeSinceStartup - pauseTimer > 1f)
 		{
 			pauseTimer = Time.realtimeSinceStartup;
