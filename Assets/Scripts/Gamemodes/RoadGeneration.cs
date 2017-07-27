@@ -68,8 +68,6 @@ public class RoadGeneration : GameMode
 			car.transform.rotation = Quaternion.identity;
 			car.GetComponent<Rigidbody> ().velocity = Vector3.zero;
 			car.GetComponent<Rigidbody> ().angularVelocity = Vector3.zero;
-
-			Generate ();
 		}
 
 		float angle = Mathf.Lerp(speedo.rotation.ToEuler().z, -(car.GetComponent<WheelVehicle>().speed) / 220 * 180, 0.53f);
