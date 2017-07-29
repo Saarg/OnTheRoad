@@ -90,6 +90,7 @@ GameObject:
   - component: {fileID: 4710842895428588}
   - component: {fileID: 146177018115879176}
   - component: {fileID: 114308848314682528}
+  - component: {fileID: 114172860219248166}
   m_Layer: 8
   m_Name: FRWheel
   m_TagString: Untagged
@@ -204,6 +205,7 @@ GameObject:
   - component: {fileID: 4391024932400606}
   - component: {fileID: 146523323051298806}
   - component: {fileID: 114531126112162524}
+  - component: {fileID: 114040510701187966}
   m_Layer: 8
   m_Name: BRWheel
   m_TagString: Untagged
@@ -267,6 +269,7 @@ GameObject:
   - component: {fileID: 4561924929322686}
   - component: {fileID: 146436251845103586}
   - component: {fileID: 114394287561930864}
+  - component: {fileID: 114373050498698998}
   m_Layer: 8
   m_Name: FLWheel
   m_TagString: Untagged
@@ -284,6 +287,7 @@ GameObject:
   - component: {fileID: 4636399736444836}
   - component: {fileID: 146363706463675662}
   - component: {fileID: 114904357456267362}
+  - component: {fileID: 114006920618145070}
   m_Layer: 8
   m_Name: BLWheel
   m_TagString: Untagged
@@ -969,6 +973,63 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114006920618145070
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944665721982556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae437f48cab54a31b2c01d2e4d2ced7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 0.1
+  decayTime: 1
+  material: {fileID: 2100000, guid: fb5c6f06a444a104c9e022d032a31c59, type: 2}
+  roughness: 0
+  softSourceEnd: 0
+  trailing: 0
+  parent: {fileID: 4706170914138724}
+  offset: {x: 0, y: -0.3, z: 0}
+--- !u!114 &114040510701187966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1848871554728766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae437f48cab54a31b2c01d2e4d2ced7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 0.1
+  decayTime: 1
+  material: {fileID: 2100000, guid: fb5c6f06a444a104c9e022d032a31c59, type: 2}
+  roughness: 0
+  softSourceEnd: 0
+  trailing: 0
+  parent: {fileID: 4642961267958392}
+  offset: {x: 0, y: -0.3, z: 0}
+--- !u!114 &114172860219248166
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1457346203295718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae437f48cab54a31b2c01d2e4d2ced7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 0.1
+  decayTime: 1
+  material: {fileID: 2100000, guid: fb5c6f06a444a104c9e022d032a31c59, type: 2}
+  roughness: 0
+  softSourceEnd: 0
+  trailing: 0
+  parent: {fileID: 4698106414952038}
+  offset: {x: 0, y: -0.3, z: 0}
 --- !u!114 &114308848314682528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -981,6 +1042,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wheelModel: {fileID: 1992032959778730}
+--- !u!114 &114373050498698998
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1914731627358306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae437f48cab54a31b2c01d2e4d2ced7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 0.1
+  decayTime: 1
+  material: {fileID: 2100000, guid: fb5c6f06a444a104c9e022d032a31c59, type: 2}
+  roughness: 0
+  softSourceEnd: 0
+  trailing: 0
+  parent: {fileID: 4307933552553734}
+  offset: {x: 0, y: -0.3, z: 0}
 --- !u!114 &114394287561930864
 MonoBehaviour:
   m_ObjectHideFlags: 1

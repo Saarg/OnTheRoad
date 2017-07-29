@@ -103,6 +103,7 @@ GameObject:
   - component: {fileID: 4736526041731244}
   - component: {fileID: 146195161887156570}
   - component: {fileID: 114561607576709498}
+  - component: {fileID: 114627236017710388}
   m_Layer: 8
   m_Name: BLWheel
   m_TagString: Untagged
@@ -265,6 +266,7 @@ GameObject:
   - component: {fileID: 4517169499153220}
   - component: {fileID: 146242388429396870}
   - component: {fileID: 114531546425550942}
+  - component: {fileID: 114540436208186246}
   m_Layer: 8
   m_Name: FLWheel
   m_TagString: Untagged
@@ -282,6 +284,7 @@ GameObject:
   - component: {fileID: 4259715506332580}
   - component: {fileID: 146007223526334854}
   - component: {fileID: 114017745420749492}
+  - component: {fileID: 114039402595342058}
   m_Layer: 8
   m_Name: BRWheel
   m_TagString: Untagged
@@ -299,6 +302,7 @@ GameObject:
   - component: {fileID: 4319170024580856}
   - component: {fileID: 146862305967389608}
   - component: {fileID: 114232445108155098}
+  - component: {fileID: 114096885815551444}
   m_Layer: 8
   m_Name: FRWheel
   m_TagString: Untagged
@@ -981,6 +985,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wheelModel: {fileID: 1216691482676088}
+--- !u!114 &114039402595342058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1842497035907454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae437f48cab54a31b2c01d2e4d2ced7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 0.1
+  decayTime: 1
+  material: {fileID: 2100000, guid: fb5c6f06a444a104c9e022d032a31c59, type: 2}
+  roughness: 0
+  softSourceEnd: 0
+  trailing: 0
+  parent: {fileID: 4844184669815676}
+  offset: {x: 0, y: -0.26, z: 0}
+--- !u!114 &114096885815551444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1872711843291480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae437f48cab54a31b2c01d2e4d2ced7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 0.1
+  decayTime: 1
+  material: {fileID: 2100000, guid: fb5c6f06a444a104c9e022d032a31c59, type: 2}
+  roughness: 0
+  softSourceEnd: 0
+  trailing: 0
+  parent: {fileID: 4757116429208876}
+  offset: {x: 0, y: -0.26, z: 0}
 --- !u!114 &114232445108155098
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1005,6 +1047,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wheelModel: {fileID: 1257856307498660}
+--- !u!114 &114540436208186246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1742234595754888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae437f48cab54a31b2c01d2e4d2ced7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 0.1
+  decayTime: 1
+  material: {fileID: 2100000, guid: fb5c6f06a444a104c9e022d032a31c59, type: 2}
+  roughness: 0
+  softSourceEnd: 0
+  trailing: 0
+  parent: {fileID: 4375490713224614}
+  offset: {x: 0, y: -0.26, z: 0}
 --- !u!114 &114561607576709498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1034,6 +1095,25 @@ MonoBehaviour:
   flatoutSpeed: 60
   minPitch: 1.2
   pitchSpeed: 0.05
+--- !u!114 &114627236017710388
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1249795466968570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae437f48cab54a31b2c01d2e4d2ced7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 0.1
+  decayTime: 1
+  material: {fileID: 2100000, guid: fb5c6f06a444a104c9e022d032a31c59, type: 2}
+  roughness: 0
+  softSourceEnd: 0
+  trailing: 0
+  parent: {fileID: 4266746993426658}
+  offset: {x: 0, y: -0.26, z: 0}
 --- !u!114 &114873251308926086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1091,7 +1171,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   brakeForce: 700
-  steerAngle: 25
+  steerAngle: 20
   steerSpeed: 0.2
   centerOfMass: {fileID: 4132077755905592}
   steering: 0
