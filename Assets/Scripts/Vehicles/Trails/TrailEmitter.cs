@@ -41,10 +41,10 @@ namespace Trails
 			WheelHit hit;
 			wheel.GetGroundHit (out hit);
 
-			if (!trailing && wheel.isGrounded && (Mathf.Abs(hit.sidewaysSlip) > 0.7f || Mathf.Abs(hit.forwardSlip) > 0.95f)) {
+			if (!trailing && wheel.isGrounded && (Mathf.Abs(hit.sidewaysSlip) > 0.7f || Mathf.Abs(hit.forwardSlip) > 0.98f)) {
 				trailing = true;
 				NewTrail ();
-			} else if (trailing && (!wheel.isGrounded || (Mathf.Abs(hit.sidewaysSlip) < 0.5f && Mathf.Abs(hit.forwardSlip) < 0.9f))) {
+			} else if (trailing && (!wheel.isGrounded || (Mathf.Abs(hit.sidewaysSlip) < 0.5f && Mathf.Abs(hit.forwardSlip) < 0.98f))) {
 				trailing = false;
 				EndTrail ();
 			}
