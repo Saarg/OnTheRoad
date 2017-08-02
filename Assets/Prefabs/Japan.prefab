@@ -261,7 +261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1855176692998594
 GameObject:
   m_ObjectHideFlags: 1
@@ -1190,7 +1190,7 @@ MonoBehaviour:
   steerSpeed: 0.2
   centerOfMass: {fileID: 4977799436323376}
   steering: 0
-  handbreak: 0
+  handbreak: 1
   speed: 0
   gasParticle: {fileID: 0}
 --- !u!114 &114311951497864986
