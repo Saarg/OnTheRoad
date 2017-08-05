@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityStandardAssets.Utility;
@@ -32,7 +33,9 @@ public class RoadGeneration : GameMode
 	protected CheckPoint start;
 	protected CheckPoint finish;
 
-	void Start() {
+	protected WebSocket w;
+
+	IEnumerator Start() {
 		car = Instantiate (track[curTrack].Car, Vector3.up * 2, Quaternion.identity);
 		Camera.main.GetComponent<SmoothFollow> ().Target = car.transform;
 
@@ -41,7 +44,27 @@ public class RoadGeneration : GameMode
 
 		car.GetComponent<Rigidbody> ().isKinematic = true;
 
+		w = new WebSocket (new System.Uri ("ws://localhost:8000"));
+		yield return StartCoroutine (w.Connect ());
+		w.SendString ("randommode");
+
 		Generate ();
+
+		// main server loop
+		while (true) {
+			string reply = w.RecvString ();
+			if (reply != null) {
+				string opcode = reply.Substring (0, 3);
+				string package = reply.Substring (4);
+			}
+			if (w.error != null) {
+				Debug.LogError ("Error: " + w.error);
+				break;
+			}
+			yield return 0;
+		}
+		Debug.Log ("Closing socket");
+		w.Close ();
 	}
 
 	void Update() {
@@ -99,6 +122,9 @@ public class RoadGeneration : GameMode
 
 		seed = seed != 0 ? seed : Random.Range (0, 99999);
 		seedInput.text = seed.ToString();
+
+		w.SendString ("sed " + (seed + 100000 * curTrack));
+
 		Random.InitState (seed);
 
 		for(int i = 0; i < track[curTrack].length; i++)
@@ -170,6 +196,10 @@ public class RoadGeneration : GameMode
 			finishTile.SetActive (true);
 		}
     }
+
+	public void sendRecord(RecorededTime time) {
+		w.SendString ("rec " + time.lapTime);
+	}
 
     protected int isTurn(GameObject t)
     {

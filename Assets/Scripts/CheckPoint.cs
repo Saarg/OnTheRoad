@@ -39,7 +39,7 @@ public class CheckPoint : MonoBehaviour {
 
     public GameObject End;
 
-    public event RaceEndEventHandler Crossed;
+	public event RaceEndEventHandler Crossed;
 
     private int index = 0;
 
@@ -105,7 +105,7 @@ public class CheckPoint : MonoBehaviour {
             bool endedRace = false;
             try
             {
-                endedRace = Crossed();
+				endedRace = Crossed();
             } catch { }
 
             if (!endedRace && tag == "EntryPoint" && startTime == 0)
@@ -152,12 +152,14 @@ public class CheckPoint : MonoBehaviour {
 
             bestLap = currentLap;
 
+			if (RoadGeneration.Instance != null) {
+				RoadGeneration.Instance.sendRecord (bestLap);
+			}
+
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + name + "-" + End.name, FileMode.Create, FileAccess.Write, FileShare.None);
             formatter.Serialize(stream, currentLap);
             stream.Close();
-            
-            
         }
         else
         {

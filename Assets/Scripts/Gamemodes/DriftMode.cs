@@ -39,6 +39,7 @@ public class DriftMode : GameMode {
 
 				if (opcode == "tra") {
 					package = package.Substring (1);
+					Debug.Log (package);
 					string[] args = package.Split('(');
 					args[0] = args[0].Substring (0, args[0].Length-1);
 					args[1] = args[1].Substring (0, args[1].Length-1);
