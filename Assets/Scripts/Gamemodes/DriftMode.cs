@@ -21,15 +21,14 @@ public class DriftMode : GameMode {
 
 	private float posTimer = 0;
 
-	IEnumerator Start ()
+	override protected IEnumerator Start ()
 	{
 		posTimer = Time.realtimeSinceStartup;
 		Dictionary<int, GameObject> ghosts = new Dictionary<int, GameObject>();
 
-		WebSocket w = new WebSocket (new Uri ("ws://localhost:8000"));
-		yield return StartCoroutine (w.Connect ());
-		w.SendString ("driftmode");
-
+		gameMode = "driftmode";
+		yield return StartCoroutine (base.Start());
+		
 		// main server loop
 		while (true) {
 			string reply = w.RecvString ();
@@ -39,7 +38,6 @@ public class DriftMode : GameMode {
 
 				if (opcode == "tra") {
 					package = package.Substring (1);
-					Debug.Log (package);
 					string[] args = package.Split('(');
 					args[0] = args[0].Substring (0, args[0].Length-1);
 					args[1] = args[1].Substring (0, args[1].Length-1);
@@ -85,12 +83,13 @@ public class DriftMode : GameMode {
 				Debug.LogError ("Error: " + w.error);
 				break;
 			}
+
 			yield return 0;
 
 			if (Time.realtimeSinceStartup - posTimer > 0.1f) {
 				posTimer = Time.realtimeSinceStartup;
 
-				w.SendString (_car.transform.position.ToString () + _car.transform.rotation.ToString ());
+				w.SendString ("tra " + _car.transform.position.ToString () + _car.transform.rotation.ToString ());
 				yield return 0;
 			}
 		}

@@ -33,9 +33,7 @@ public class RoadGeneration : GameMode
 	protected CheckPoint start;
 	protected CheckPoint finish;
 
-	protected WebSocket w;
-
-	IEnumerator Start() {
+	override protected IEnumerator Start() {
 		car = Instantiate (track[curTrack].Car, Vector3.up * 2, Quaternion.identity);
 		Camera.main.GetComponent<SmoothFollow> ().Target = car.transform;
 
@@ -44,9 +42,8 @@ public class RoadGeneration : GameMode
 
 		car.GetComponent<Rigidbody> ().isKinematic = true;
 
-		w = new WebSocket (new System.Uri ("ws://localhost:8000"));
-		yield return StartCoroutine (w.Connect ());
-		w.SendString ("randommode");
+		gameMode = "randommode";
+		yield return StartCoroutine (base.Start());
 
 		Generate ();
 

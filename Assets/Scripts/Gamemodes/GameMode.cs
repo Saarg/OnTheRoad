@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -13,7 +14,20 @@ public class GameMode : MonoBehaviour {
 	public Text LapTimer
 	{ get { return lapTimer; } }
 
-    virtual protected void Awake()
+	protected WebSocket w;
+	protected string gameMode = "none";
+
+	virtual protected IEnumerator Start ()
+	{
+    	Debug.Log("Opening socket");
+		w = new WebSocket (new System.Uri ("ws://localhost:8000"));
+		yield return StartCoroutine (w.Connect ());
+
+		Debug.Log("Sending gamemode");
+		w.SendString (gameMode);
+	}
+
+    virtual protected void Awake ()
     {
         if (instance == null)
         {
@@ -35,5 +49,11 @@ public class GameMode : MonoBehaviour {
 	public void Quit()
 	{
 		Application.Quit();
+	}
+
+	virtual protected void OnDestroy() {
+		Debug.Log ("Closing socket");
+        w.SendString("qut gamemode destroyed");
+		w.Close ();
 	}
 }
