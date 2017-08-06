@@ -42,7 +42,7 @@ public class CheckPoint : MonoBehaviour {
 	public event RaceEndEventHandler Crossed;
 
     private int index = 0;
-
+    
     private void OnEnable()
     {
         if (File.Exists(Application.persistentDataPath + "/" + SceneManager.GetActiveScene().name + "-" + name + "-" + End.name))
