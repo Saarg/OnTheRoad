@@ -7,11 +7,21 @@ ModelImporter:
   fileIDToRecycleName:
     100000: default
     100002: //RootNode
+    100004: default_MeshPart0
+    100006: default_MeshPart1
     400000: default
     400002: //RootNode
+    400004: default_MeshPart0
+    400006: default_MeshPart1
     2300000: default
+    2300002: default_MeshPart0
+    2300004: default_MeshPart1
     3300000: default
+    3300002: default_MeshPart0
+    3300004: default_MeshPart1
     4300000: default
+    4300002: default_MeshPart0
+    4300004: default_MeshPart1
   materials:
     importMaterials: 1
     materialName: 0
@@ -47,7 +57,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
