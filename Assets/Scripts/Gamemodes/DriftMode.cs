@@ -2,32 +2,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DriftMode : GameMode {
 
-	[SerializeField]
-	private GameObject _car;
+	[SerializeField] private GameObject _car;
 
-	[SerializeField]
-	private Canvas inGameUI;
+	[SerializeField] private Canvas _inGameUi;
 
-	[SerializeField]
-	private Canvas pauseUI;
-	[SerializeField]
-	private RectTransform speedo;
+	[SerializeField] private Canvas _pauseUi;
+	[SerializeField] private RectTransform _speedo;
 
-	new public static FreePlayMode Instance
+	[SerializeField] private Text _score;
+	[SerializeField] private Text _scoreIncrement;
+
+	public new static FreePlayMode Instance
 	{ get { return (FreePlayMode) instance; } }
 
 	private float posTimer = 0;
 
-	override protected IEnumerator Start ()
+	protected override IEnumerator Start ()
 	{
 		posTimer = Time.realtimeSinceStartup;
 		Dictionary<int, GameObject> ghosts = new Dictionary<int, GameObject>();
 
 		gameMode = "driftmode";
 		yield return StartCoroutine (base.Start());
+		
+		StartCoroutine(DriftCoroutine());
 		
 		// main server loop
 		while (true) {
@@ -97,10 +99,13 @@ public class DriftMode : GameMode {
 		Debug.Log ("Closing socket");
 		w.Close ();
 	}
-
+	
 	void Update () {
 		if (Controls.MultiOSControls.Instance.getValue("Submit") != 0)
 		{
+			StopAllCoroutines();
+			StartCoroutine(DriftCoroutine());
+			
 			_car.transform.position = Vector3.up;
 			_car.transform.rotation = Quaternion.identity;
 		}
@@ -109,9 +114,8 @@ public class DriftMode : GameMode {
 			Pause();
 		}
 
-		float angle = Mathf.Lerp(speedo.rotation.ToEuler().z, -(_car.GetComponent<WheelVehicle>().speed) / 220 * 180, 0.53f);
-
-		speedo.rotation = Quaternion.AngleAxis(4 * angle, Vector3.forward);
+		float angle = Mathf.Lerp(_speedo.rotation.ToEuler().z, -(_car.GetComponent<WheelVehicle>().speed) / 220 * 180, 0.53f);
+		_speedo.rotation = Quaternion.AngleAxis(4 * angle, Vector3.forward);
 	}
 
 	public void Pause()
@@ -120,8 +124,8 @@ public class DriftMode : GameMode {
 
 		Time.timeScale = 0;
 
-		pauseUI.gameObject.SetActive(true);
-		inGameUI.gameObject.SetActive(false);
+		_pauseUi.gameObject.SetActive(true);
+		_inGameUi.gameObject.SetActive(false);
 	}
 
 	public void Resume()
@@ -130,7 +134,40 @@ public class DriftMode : GameMode {
 
 		Time.timeScale = 1;
 
-		pauseUI.gameObject.SetActive(false);
-		inGameUI.gameObject.SetActive(true);
+		_pauseUi.gameObject.SetActive(false);
+		_inGameUi.gameObject.SetActive(true);
+	}
+
+	private IEnumerator DriftCoroutine()
+	{
+		int s = 0;
+		_score.text = "score: " + s;
+		_scoreIncrement.text = "";
+		
+		Debug.Log("Start DriftCoroutine");
+		
+		while (true)
+		{
+			float driftAngle = Vector3.Angle(_car.transform.forward, _car.GetComponent<Rigidbody>().velocity);
+
+			if (driftAngle > 20f && _car.GetComponent<Rigidbody>().velocity.magnitude > 5)
+			{
+				yield return new WaitForSeconds(0.1f);
+				float i = 0;
+				do
+				{
+					_scoreIncrement.text = "+" + (++i * 100);
+					driftAngle = Vector3.Angle(_car.transform.forward, _car.GetComponent<Rigidbody>().velocity);
+					yield return new WaitForSeconds(0.5f);
+				} while (driftAngle > 15f && _car.GetComponent<Rigidbody>().velocity.magnitude > 3);
+				Debug.Log("+" + (i * 100));
+				s += (int) (i * 100);
+				_score.text = "score: " + s;
+				_scoreIncrement.text = "";
+			}
+			yield return new WaitForSeconds(0.1f);
+		}
+		
+		Debug.Log("Stop DriftCoroutine");
 	}
 }
