@@ -14,7 +14,13 @@ public class DriftMode : GameMode {
 	[SerializeField] private RectTransform _speedo;
 
 	[SerializeField] private Text _score;
+	[SerializeField] private Text _bestScoreT;
 	[SerializeField] private Text _scoreIncrement;
+	[SerializeField] private Text _timeT;
+
+	private int _bestScore;
+
+	private float _timer;
 
 	public new static FreePlayMode Instance
 	{ get { return (FreePlayMode) instance; } }
@@ -23,7 +29,7 @@ public class DriftMode : GameMode {
 
 	protected override IEnumerator Start ()
 	{
-		posTimer = Time.realtimeSinceStartup;
+		posTimer = _timer = Time.realtimeSinceStartup;
 		Dictionary<int, GameObject> ghosts = new Dictionary<int, GameObject>();
 
 		gameMode = "driftmode";
@@ -101,13 +107,20 @@ public class DriftMode : GameMode {
 	}
 	
 	void Update () {
-		if (Controls.MultiOSControls.Instance.getValue("Submit") != 0)
+		{
+			float timeLeft = (120f - (Time.realtimeSinceStartup - _timer));
+			_timeT.text = "" + (int)(timeLeft / 60) + ":" + (int)(timeLeft % 60);
+		}
+
+		if (Controls.MultiOSControls.Instance.getValue("Submit") != 0 || Time.realtimeSinceStartup - _timer > 120f)
 		{
 			StopAllCoroutines();
 			StartCoroutine(DriftCoroutine());
 			
 			_car.transform.position = Vector3.up;
 			_car.transform.rotation = Quaternion.identity;
+
+			_timer = Time.realtimeSinceStartup;
 		}
 		if (Controls.MultiOSControls.Instance.getValue("Cancel") != 0)
 		{
@@ -143,6 +156,7 @@ public class DriftMode : GameMode {
 		int s = 0;
 		_score.text = "score: " + s;
 		_scoreIncrement.text = "";
+		_bestScoreT.text = "best: " + _bestScore;
 		
 		Debug.Log("Start DriftCoroutine");
 		
@@ -160,10 +174,16 @@ public class DriftMode : GameMode {
 					driftAngle = Vector3.Angle(_car.transform.forward, _car.GetComponent<Rigidbody>().velocity);
 					yield return new WaitForSeconds(0.5f);
 				} while (driftAngle > 15f && _car.GetComponent<Rigidbody>().velocity.magnitude > 3);
-				Debug.Log("+" + (i * 100));
+				
 				s += (int) (i * 100);
 				_score.text = "score: " + s;
 				_scoreIncrement.text = "";
+				
+				if (s > _bestScore)
+				{
+					_bestScore = s;
+					_bestScoreT.text = "best: " + _bestScore;
+				}
 			}
 			yield return new WaitForSeconds(0.1f);
 		}
