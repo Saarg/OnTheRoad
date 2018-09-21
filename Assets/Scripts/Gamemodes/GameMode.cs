@@ -14,17 +14,18 @@ public class GameMode : MonoBehaviour {
 	public Text LapTimer
 	{ get { return lapTimer; } }
 
-	protected WebSocket w;
+	// protected WebSocket w;
 	protected string gameMode = "none";
 
 	virtual protected IEnumerator Start ()
 	{
-    	Debug.Log("Opening socket");
-		w = new WebSocket (new System.Uri ("ws://localhost:8000"));
-		yield return StartCoroutine (w.Connect ());
+    	// Debug.Log("Opening socket");
+		// w = new WebSocket (new System.Uri ("ws://localhost:8000"));
+		// yield return StartCoroutine (w.Connect ());
 
-		Debug.Log("Sending gamemode");
-		w.SendString (gameMode);
+		// Debug.Log("Sending gamemode");
+		// w.SendString (gameMode);
+		yield return null;
 	}
 
     virtual protected void Awake ()
@@ -52,8 +53,8 @@ public class GameMode : MonoBehaviour {
 	}
 
 	virtual protected void OnDestroy() {
-		Debug.Log ("Closing socket");
-        w.SendString("qut gamemode destroyed");
-		w.Close ();
+		// Debug.Log ("Closing socket");
+        // w.SendString("qut gamemode destroyed");
+		// w.Close ();
 	}
 }

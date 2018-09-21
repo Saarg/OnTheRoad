@@ -47,21 +47,21 @@ public class RoadGeneration : GameMode
 
 		Generate ();
 
-		// main server loop
-		while (true) {
-			string reply = w.RecvString ();
-			if (reply != null) {
-				string opcode = reply.Substring (0, 3);
-				string package = reply.Substring (4);
-			}
-			if (w.error != null) {
-				Debug.LogError ("Error: " + w.error);
-				break;
-			}
-			yield return 0;
-		}
-		Debug.Log ("Closing socket");
-		w.Close ();
+		// // main server loop
+		// while (true) {
+		// 	string reply = w.RecvString ();
+		// 	if (reply != null) {
+		// 		string opcode = reply.Substring (0, 3);
+		// 		string package = reply.Substring (4);
+		// 	}
+		// 	if (w.error != null) {
+		// 		Debug.LogError ("Error: " + w.error);
+		// 		break;
+		// 	}
+		// 	yield return 0;
+		// }
+		// Debug.Log ("Closing socket");
+		// w.Close ();
 	}
 
 	void Update() {
@@ -120,7 +120,7 @@ public class RoadGeneration : GameMode
 		seed = seed != 0 ? seed : Random.Range (0, 99999);
 		seedInput.text = seed.ToString();
 
-		w.SendString ("sed " + (seed + 100000 * curTrack));
+		// w.SendString ("sed " + (seed + 100000 * curTrack));
 
 		Random.InitState (seed);
 
@@ -195,7 +195,7 @@ public class RoadGeneration : GameMode
     }
 
 	public void sendRecord(RecorededTime time) {
-		w.SendString ("rec " + time.lapTime);
+		// w.SendString ("rec " + time.lapTime);
 	}
 
     protected int isTurn(GameObject t)

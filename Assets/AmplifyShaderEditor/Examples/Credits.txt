@@ -1,2 +1,0 @@
-Fire texture - http://suicidecrew.deviantart.com/art/Fire-Seamless-tile-116721709
-Screen Space Curvature - http://madebyevan.com/shaders/curvature/
